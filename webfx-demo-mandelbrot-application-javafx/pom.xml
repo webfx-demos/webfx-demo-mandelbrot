@@ -60,6 +60,22 @@
     
     </dependencies>
 
+    <properties>
+        <plugin.javapackager.name>Mandelbrot</plugin.javapackager.name>
+        <plugin.javapackager.displayName>Mandelbrot</plugin.javapackager.displayName>
+        <plugin.javapackager.url>https://webfx-mandelbrot-demo.netlify.app</plugin.javapackager.url>
+    </properties>
+
+    <build>
+        <plugins>
+            <!-- This plugin must be ran explicitly by invoking mvn javafx:jlink -->
+            <plugin>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
     <profiles>
         <!-- profile to make a fat standalone executable jar with all dependent libraries included inside -->
         <profile>
@@ -80,6 +96,22 @@
                 </plugins>
             </build>
         </profile>
+
+        <profile>
+            <id>javapackager</id>
+
+            <build>
+                <plugins>
+
+                    <plugin>
+                        <groupId>io.github.fvarrui</groupId>
+                        <artifactId>javapackager</artifactId>
+                    </plugin>
+
+                </plugins>
+            </build>
+        </profile>
+
     </profiles>
 
 </project>

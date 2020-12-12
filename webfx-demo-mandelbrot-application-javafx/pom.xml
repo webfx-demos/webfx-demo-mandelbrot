@@ -63,7 +63,7 @@
     <properties>
         <plugin.javapackager.name>Mandelbrot</plugin.javapackager.name>
         <plugin.javapackager.displayName>Mandelbrot</plugin.javapackager.displayName>
-        <plugin.javapackager.url>https://webfx-mandelbrot-demo.netlify.app</plugin.javapackager.url>
+        <plugin.javapackager.url>https://mandelbrot.webfx-project.org</plugin.javapackager.url>
     </properties>
 
     <build>

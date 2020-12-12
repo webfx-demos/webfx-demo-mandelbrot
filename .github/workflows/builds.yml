@@ -32,7 +32,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        app: [{name: 'Mandelbrot', module-token: 'webfx-demo-mandelbrot', gwt-token: 'webfx_demo_mandelbrot', web-push-branch: 'web-build', ios-bundle-id: 'org.webfx.demo.mandelbrot', version: '0.1.0-SNAPSHOT'}]
+        app: [{name: 'Mandelbrot', module-token: 'webfx-demo-mandelbrot', gwt-token: 'webfx_demo_mandelbrot', web-push-branch: 'mandelbrot', ios-bundle-id: 'org.webfx.demo.mandelbrot', version: '0.1.0-SNAPSHOT'}]
         os-config:  [1, 2, 3, 4]
         include:
           - os-config: 1 # Generates builds 1) 2) 3) 4) & 5)
@@ -84,7 +84,7 @@ jobs:
       app-gwt-module-dir:        ./${{ matrix.app.module-token }}-application-gwt
       app-gwt-build-dir:         ./${{ matrix.app.module-token }}-application-gwt/target/${{ matrix.app.module-token }}-application-gwt-${{ matrix.app.version }}/${{ matrix.app.gwt-token }}_application_gwt
       app-gluon-module-dir:      ./${{ matrix.app.module-token }}-application-gluon
-      web-push-repository-name:  ${{ matrix.app.module-token }} # This same repository (Github doesn't provide ${{ github.repository_name }}
+      web-push-repository-name:  'webfx-website-netlify'
       web-push-repository-owner: ${{ github.repository_owner }}
       web-push-username: ${{ github.actor }}
       web-push-email: ${{ secrets.API_GITHUB_EMAIL }}

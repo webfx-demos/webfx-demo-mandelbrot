@@ -12,9 +12,9 @@ module webfx.demo.mandelbrot.application {
     requires webfx.platform.shared.webworker;
 
     // Exported packages
-    exports webfx.demo.mandelbrot;
+    exports dev.webfx.demo.mandelbrot;
 
     // Provided services
-    provides javafx.application.Application with webfx.demo.mandelbrot.MandelbrotApplication;
+    provides javafx.application.Application with dev.webfx.demo.mandelbrot.MandelbrotApplication;
 
 }

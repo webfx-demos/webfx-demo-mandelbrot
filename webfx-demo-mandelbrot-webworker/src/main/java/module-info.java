@@ -10,6 +10,6 @@ module webfx.demo.mandelbrot.webworker {
     requires webfx.platform.shared.webworker;
 
     // Exported packages
-    exports webfx.demo.mandelbrot.webworker;
+    exports dev.webfx.demo.mandelbrot.webworker;
 
 }

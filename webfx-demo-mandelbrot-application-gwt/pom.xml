@@ -281,7 +281,7 @@
                         <configuration>
                             <target>
                                 <!-- Copying the JavaScript file of the webWorker (compiled by TeaVM) -->
-                                <copy file="${project.basedir}/../webfx-demo-mandelbrot-webworker-teavm/target/teavm/classes.js" tofile="${project.build.outputDirectory}/public/webfx.demo.mandelbrot.webworker.MandelbrotWebWorker.js"/>
+                                <copy file="${project.basedir}/../webfx-demo-mandelbrot-webworker-teavm/target/teavm/classes.js" tofile="${project.build.outputDirectory}/public/dev.webfx.demo.mandelbrot.webworker.MandelbrotWebWorker.js"/>
                                 <!-- Copying the WebAssembly file of the computation (compiled by TeaVM) -->
                                 <copy file="${project.basedir}/../webfx-demo-mandelbrot-webassembly-teavm/target/teavm/classes.wasm" tofile="${project.build.outputDirectory}/public/classes.wasm"/>
                             </target>

@@ -13,6 +13,6 @@ module webfx.demo.mandelbrot.tracerframework {
     requires webfx.platform.shared.webworker;
 
     // Exported packages
-    exports webfx.demo.mandelbrot.tracerframework;
+    exports dev.webfx.demo.mandelbrot.tracerframework;
 
 }

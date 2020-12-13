@@ -1,17 +1,17 @@
 [
   {
-    "name" : "webfx.demo.mandelbrot.webworker.MandelbrotWebWorker",
+    "name" : "dev.webfx.demo.mandelbrot.webworker.MandelbrotWebWorker",
     "methods" : [
       { "name" : "<init>", "parameterTypes" : [] }
     ]
   },    {
-        "name" : "webfx.kit.launcher.spi.javafx.JavaFxWebFxKitLauncherProvider$FxKitWrapperApplication",
+        "name" : "dev.webfx.kit.launcher.spi.javafx.JavaFxWebFxKitLauncherProvider$FxKitWrapperApplication",
         "methods" : [
             { "name" : "<init>", "parameterTypes" : [] }
         ]
     },
     {
-        "name" : "webfx.kit.mapper.peers.javafxcontrols.javafx.skin.FxControlPeerSkin",
+        "name" : "dev.webfx.kit.mapper.peers.javafxcontrols.javafx.skin.FxControlPeerSkin",
         "methods" : [
             { "name" : "<init>", "parameterTypes" : ["javafx.scene.control.Control"] }
         ]

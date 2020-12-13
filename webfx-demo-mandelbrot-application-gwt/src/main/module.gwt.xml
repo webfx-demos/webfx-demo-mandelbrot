@@ -40,6 +40,11 @@
     <source path="com/sun/javafx/tk/quantum"/>
     <source path="com/sun/javafx/util"/>
     <source path="com/sun/scenario/animation"/>
+    <source path="dev/webfx/kit/mapper"/>
+    <source path="dev/webfx/kit/mapper/peers/javafxgraphics/emul_coupling"/>
+    <source path="dev/webfx/kit/mapper/peers/javafxgraphics/emul_coupling/base"/>
+    <source path="dev/webfx/kit/mapper/spi"/>
+    <source path="dev/webfx/kit/mapper/spi/base"/>
     <source path="javafx/animation"/>
     <source path="javafx/application"/>
     <source path="javafx/css"/>
@@ -55,11 +60,6 @@
     <source path="javafx/scene/text"/>
     <source path="javafx/scene/transform"/>
     <source path="javafx/stage"/>
-    <source path="webfx/kit/mapper"/>
-    <source path="webfx/kit/mapper/peers/javafxgraphics/emul_coupling"/>
-    <source path="webfx/kit/mapper/peers/javafxgraphics/emul_coupling/base"/>
-    <source path="webfx/kit/mapper/spi"/>
-    <source path="webfx/kit/mapper/spi/base"/>
     <!--=================================< elemental2-dom >=================================-->
     <!-- used by webfx-kit-javafxgraphics-peers-gwt (SOURCE) -->
     <!-- used by webfx-platform-gwt-shutdown-impl (SOURCE) -->
@@ -90,50 +90,50 @@
     <!-- used by webfx-kit-javafxgraphics-peers-base (SOURCE) -->
     <!--=======================< webfx-demo-mandelbrot-application >========================-->
     <!-- used by webfx-demo-mandelbrot-application-gwt (APPLICATION) -->
-    <source path="webfx/demo/mandelbrot"/>
+    <source path="dev/webfx/demo/mandelbrot"/>
     <!--===========================< webfx-demo-mandelbrot-math >===========================-->
     <!-- used by webfx-demo-mandelbrot-application (SOURCE) -->
-    <source path="webfx/demo/mandelbrot/math"/>
-    <source path="webfx/demo/mandelbrot/math/original"/>
+    <source path="dev/webfx/demo/mandelbrot/math"/>
+    <source path="dev/webfx/demo/mandelbrot/math/original"/>
     <!--=====================< webfx-demo-mandelbrot-tracerframework >======================-->
     <!-- used by webfx-demo-mandelbrot-application (SOURCE) -->
-    <source path="webfx/demo/mandelbrot/tracerframework"/>
+    <source path="dev/webfx/demo/mandelbrot/tracerframework"/>
     <!--========================< webfx-demo-mandelbrot-webworker >=========================-->
     <!-- used by webfx-demo-mandelbrot-application (SOURCE) -->
-    <source path="webfx/demo/mandelbrot/webworker"/>
+    <source path="dev/webfx/demo/mandelbrot/webworker"/>
     <!--=================================< webfx-kit-gwt >==================================-->
     <!-- used by webfx-demo-mandelbrot-application-gwt (IMPLICIT_PROVIDER) -->
     <!-- used by webfx-demo-mandelbrot-application-gwt (EMULATION) -->
-    <source path="webfx/kit/launcher/spi/gwt"/>
-    <source path="webfx/kit/mapper/spi/gwt"/>
+    <source path="dev/webfx/kit/launcher/spi/gwt"/>
+    <source path="dev/webfx/kit/mapper/spi/gwt"/>
     <!--=========================< webfx-kit-javafxgraphics-peers >=========================-->
     <!-- used by webfx-kit-javafxgraphics-emul (SOURCE) -->
     <!-- used by webfx-kit-javafxgraphics-registry-gwt (SOURCE) -->
-    <source path="webfx/kit/mapper/peers/javafxgraphics"/>
-    <source path="webfx/kit/mapper/peers/javafxgraphics/markers"/>
+    <source path="dev/webfx/kit/mapper/peers/javafxgraphics"/>
+    <source path="dev/webfx/kit/mapper/peers/javafxgraphics/markers"/>
     <!--======================< webfx-kit-javafxgraphics-peers-base >=======================-->
     <!-- used by webfx-kit-javafxgraphics-peers-gwt (SOURCE) -->
-    <source path="webfx/kit/mapper/peers/javafxgraphics/base"/>
+    <source path="dev/webfx/kit/mapper/peers/javafxgraphics/base"/>
     <!--=======================< webfx-kit-javafxgraphics-peers-gwt >=======================-->
     <!-- used by webfx-kit-gwt (SOURCE) -->
     <!-- used by webfx-kit-javafxgraphics-registry-gwt (SOURCE) -->
-    <source path="webfx/kit/mapper/peers/javafxgraphics/gwt/html"/>
-    <source path="webfx/kit/mapper/peers/javafxgraphics/gwt/html/layoutmeasurable"/>
-    <source path="webfx/kit/mapper/peers/javafxgraphics/gwt/shared"/>
-    <source path="webfx/kit/mapper/peers/javafxgraphics/gwt/svg"/>
-    <source path="webfx/kit/mapper/peers/javafxgraphics/gwt/util"/>
+    <source path="dev/webfx/kit/mapper/peers/javafxgraphics/gwt/html"/>
+    <source path="dev/webfx/kit/mapper/peers/javafxgraphics/gwt/html/layoutmeasurable"/>
+    <source path="dev/webfx/kit/mapper/peers/javafxgraphics/gwt/shared"/>
+    <source path="dev/webfx/kit/mapper/peers/javafxgraphics/gwt/svg"/>
+    <source path="dev/webfx/kit/mapper/peers/javafxgraphics/gwt/util"/>
     <!--=====================< webfx-kit-javafxgraphics-registry-gwt >======================-->
     <!-- used by webfx-demo-mandelbrot-application-gwt (IMPLICIT_PROVIDER) -->
-    <source path="webfx/kit/registry/javafxgraphics"/>
+    <source path="dev/webfx/kit/registry/javafxgraphics"/>
     <!--===============================< webfx-kit-launcher >===============================-->
     <!-- used by webfx-kit-javafxgraphics-emul (SOURCE) -->
-    <source path="webfx/kit/launcher"/>
-    <source path="webfx/kit/launcher/spi"/>
-    <source path="webfx/kit/launcher/spi/base"/>
+    <source path="dev/webfx/kit/launcher"/>
+    <source path="dev/webfx/kit/launcher/spi"/>
+    <source path="dev/webfx/kit/launcher/spi/base"/>
     <!--=================================< webfx-kit-util >=================================-->
     <!-- used by webfx-kit-javafxgraphics-emul (SOURCE) -->
-    <source path="webfx/kit/util/properties"/>
-    <source path="webfx/kit/util/properties/conversion"/>
+    <source path="dev/webfx/kit/util/properties"/>
+    <source path="dev/webfx/kit/util/properties/conversion"/>
     <!--============================< webfx-lib-javacupruntime >============================-->
     <!-- used by webfx-platform-shared-json (SOURCE) -->
     <source path="java_cup/runtime"/>
@@ -144,73 +144,73 @@
     <!--=======================< webfx-platform-client-uischeduler >========================-->
     <!-- used by webfx-kit-javafxgraphics-emul (SOURCE) -->
     <!-- used by webfx-platform-gwt-uischeduler-impl (SOURCE) -->
-    <source path="webfx/platform/client/services/uischeduler"/>
-    <source path="webfx/platform/client/services/uischeduler/spi"/>
-    <source path="webfx/platform/client/services/uischeduler/spi/impl"/>
+    <source path="dev/webfx/platform/client/services/uischeduler"/>
+    <source path="dev/webfx/platform/client/services/uischeduler/spi"/>
+    <source path="dev/webfx/platform/client/services/uischeduler/spi/impl"/>
     <!--=======================< webfx-platform-client-webassembly >========================-->
     <!-- used by webfx-demo-mandelbrot-webworker (SOURCE) -->
-    <source path="webfx/platform/client/services/webassembly"/>
-    <source path="webfx/platform/client/services/webassembly/spi"/>
+    <source path="dev/webfx/platform/client/services/webassembly"/>
+    <source path="dev/webfx/platform/client/services/webassembly/spi"/>
     <!--======================< webfx-platform-gwt-appcontainer-impl >======================-->
     <!-- used by webfx-demo-mandelbrot-application-gwt (IMPLICIT_PROVIDER) -->
-    <source path="webfx/platform/gwt/services/appcontainer/spi/impl"/>
+    <source path="dev/webfx/platform/gwt/services/appcontainer/spi/impl"/>
     <!--==========================< webfx-platform-gwt-json-impl >==========================-->
     <!-- used by webfx-demo-mandelbrot-application-gwt (IMPLICIT_PROVIDER) -->
-    <source path="webfx/platform/gwt/services/json/spi/impl"/>
+    <source path="dev/webfx/platform/gwt/services/json/spi/impl"/>
     <!--==========================< webfx-platform-gwt-log-impl >===========================-->
     <!-- used by webfx-demo-mandelbrot-application-gwt (IMPLICIT_PROVIDER) -->
-    <source path="webfx/platform/gwt/services/log/spi/impl"/>
+    <source path="dev/webfx/platform/gwt/services/log/spi/impl"/>
     <!--========================< webfx-platform-gwt-resource-impl >========================-->
     <!-- used by webfx-demo-mandelbrot-application-gwt (IMPLICIT_PROVIDER) -->
-    <source path="webfx/platform/gwt/services/resource/spi/impl"/>
+    <source path="dev/webfx/platform/gwt/services/resource/spi/impl"/>
     <!--========================< webfx-platform-gwt-shutdown-impl >========================-->
     <!-- used by webfx-demo-mandelbrot-application-gwt (IMPLICIT_PROVIDER) -->
-    <source path="webfx/platform/gwt/services/shutdown/spi/impl"/>
+    <source path="dev/webfx/platform/gwt/services/shutdown/spi/impl"/>
     <!--======================< webfx-platform-gwt-uischeduler-impl >=======================-->
     <!-- used by webfx-demo-mandelbrot-application-gwt (IMPLICIT_PROVIDER) -->
-    <source path="webfx/platform/gwt/services/uischeduler/spi/impl"/>
+    <source path="dev/webfx/platform/gwt/services/uischeduler/spi/impl"/>
     <!--=======================< webfx-platform-gwt-webworker-impl >========================-->
     <!-- used by webfx-demo-mandelbrot-application-gwt (IMPLICIT_PROVIDER) -->
-    <source path="webfx/platform/gwt/services/webworker/spi/impl"/>
+    <source path="dev/webfx/platform/gwt/services/webworker/spi/impl"/>
     <!--=======================< webfx-platform-shared-appcontainer >=======================-->
     <!-- used by webfx-kit-launcher (SOURCE) -->
     <!-- used by webfx-platform-gwt-appcontainer-impl (SOURCE) -->
     <!-- used by webfx-platform-gwt-resource-impl (SOURCE) -->
-    <source path="webfx/platform/shared/services/appcontainer"/>
-    <source path="webfx/platform/shared/services/appcontainer/spi"/>
-    <source path="webfx/platform/shared/services/appcontainer/spi/impl"/>
+    <source path="dev/webfx/platform/shared/services/appcontainer"/>
+    <source path="dev/webfx/platform/shared/services/appcontainer/spi"/>
+    <source path="dev/webfx/platform/shared/services/appcontainer/spi/impl"/>
     <!--===========================< webfx-platform-shared-json >===========================-->
     <!-- used by webfx-demo-mandelbrot-tracerframework (SOURCE) -->
     <!-- used by webfx-platform-gwt-json-impl (SOURCE) -->
-    <source path="webfx/platform/shared/services/json"/>
-    <source path="webfx/platform/shared/services/json/parser"/>
-    <source path="webfx/platform/shared/services/json/parser/javacup"/>
-    <source path="webfx/platform/shared/services/json/parser/jflex"/>
-    <source path="webfx/platform/shared/services/json/spi"/>
-    <source path="webfx/platform/shared/services/json/spi/impl/listmap"/>
+    <source path="dev/webfx/platform/shared/services/json"/>
+    <source path="dev/webfx/platform/shared/services/json/parser"/>
+    <source path="dev/webfx/platform/shared/services/json/parser/javacup"/>
+    <source path="dev/webfx/platform/shared/services/json/parser/jflex"/>
+    <source path="dev/webfx/platform/shared/services/json/spi"/>
+    <source path="dev/webfx/platform/shared/services/json/spi/impl/listmap"/>
     <!--===========================< webfx-platform-shared-log >============================-->
     <!-- used by webfx-kit-launcher (SOURCE) -->
     <!-- used by webfx-platform-gwt-log-impl (SOURCE) -->
     <!-- used by webfx-platform-gwt-uischeduler-impl (SOURCE) -->
     <!-- used by webfx-platform-shared-appcontainer (SOURCE) -->
-    <source path="webfx/platform/shared/services/log"/>
-    <source path="webfx/platform/shared/services/log/spi"/>
+    <source path="dev/webfx/platform/shared/services/log"/>
+    <source path="dev/webfx/platform/shared/services/log/spi"/>
     <!--=========================< webfx-platform-shared-resource >=========================-->
     <!-- used by webfx-kit-javafxgraphics-peers-gwt (SOURCE) -->
     <!-- used by webfx-platform-gwt-resource-impl (SOURCE) -->
-    <source path="webfx/platform/shared/services/resource"/>
-    <source path="webfx/platform/shared/services/resource/spi"/>
+    <source path="dev/webfx/platform/shared/services/resource"/>
+    <source path="dev/webfx/platform/shared/services/resource/spi"/>
     <!--========================< webfx-platform-shared-scheduler >=========================-->
     <!-- used by webfx-platform-client-uischeduler (SOURCE) -->
-    <source path="webfx/platform/shared/services/scheduler"/>
-    <source path="webfx/platform/shared/services/scheduler/spi"/>
+    <source path="dev/webfx/platform/shared/services/scheduler"/>
+    <source path="dev/webfx/platform/shared/services/scheduler/spi"/>
     <!--=========================< webfx-platform-shared-shutdown >=========================-->
     <!-- used by webfx-kit-javafxgraphics-emul (SOURCE) -->
     <!-- used by webfx-platform-gwt-shutdown-impl (SOURCE) -->
     <!-- used by webfx-platform-shared-appcontainer (SOURCE) -->
-    <source path="webfx/platform/shared/services/shutdown"/>
-    <source path="webfx/platform/shared/services/shutdown/spi"/>
-    <source path="webfx/platform/shared/services/shutdown/spi/impl"/>
+    <source path="dev/webfx/platform/shared/services/shutdown"/>
+    <source path="dev/webfx/platform/shared/services/shutdown/spi"/>
+    <source path="dev/webfx/platform/shared/services/shutdown/spi/impl"/>
     <!--===========================< webfx-platform-shared-util >===========================-->
     <!-- used by webfx-kit-javafxgraphics-emul (SOURCE) -->
     <!-- used by webfx-kit-javafxgraphics-peers (SOURCE) -->
@@ -220,21 +220,21 @@
     <!-- used by webfx-platform-shared-resource (SOURCE) -->
     <!-- used by webfx-platform-shared-shutdown (SOURCE) -->
     <!-- used by webfx-platform-shared-webworker (SOURCE) -->
-    <source path="webfx/platform/shared/util"/>
-    <source path="webfx/platform/shared/util/async"/>
-    <source path="webfx/platform/shared/util/collection"/>
-    <source path="webfx/platform/shared/util/function"/>
-    <source path="webfx/platform/shared/util/noreflect"/>
-    <source path="webfx/platform/shared/util/serviceloader"/>
-    <source path="webfx/platform/shared/util/tuples"/>
-    <source path="webfx/platform/shared/util/uuid"/>
+    <source path="dev/webfx/platform/shared/util"/>
+    <source path="dev/webfx/platform/shared/util/async"/>
+    <source path="dev/webfx/platform/shared/util/collection"/>
+    <source path="dev/webfx/platform/shared/util/function"/>
+    <source path="dev/webfx/platform/shared/util/noreflect"/>
+    <source path="dev/webfx/platform/shared/util/serviceloader"/>
+    <source path="dev/webfx/platform/shared/util/tuples"/>
+    <source path="dev/webfx/platform/shared/util/uuid"/>
     <!--========================< webfx-platform-shared-webworker >=========================-->
     <!-- used by webfx-demo-mandelbrot-tracerframework (SOURCE) -->
     <!-- used by webfx-platform-gwt-webworker-impl (SOURCE) -->
-    <source path="webfx/platform/shared/services/webworker"/>
-    <source path="webfx/platform/shared/services/webworker/pool"/>
-    <source path="webfx/platform/shared/services/webworker/spi"/>
-    <source path="webfx/platform/shared/services/webworker/spi/base"/>
+    <source path="dev/webfx/platform/shared/services/webworker"/>
+    <source path="dev/webfx/platform/shared/services/webworker/pool"/>
+    <source path="dev/webfx/platform/shared/services/webworker/spi"/>
+    <source path="dev/webfx/platform/shared/services/webworker/spi/base"/>
 
     <source path="mongoose/client/services/bus/conf/gwt"/>
     <source path="mongoose/shared/domainmodel/gwt"/>
@@ -245,7 +245,7 @@
     <set-property name="jre.checks.checkLevel" value="MINIMAL"/>
 
     <!-- Specify the app entry point class. -->
-    <entry-point class="webfx.platform.gwt.services.appcontainer.spi.impl.GwtApplicationContainerProvider"/>
+    <entry-point class="dev.webfx.platform.gwt.services.appcontainer.spi.impl.GwtApplicationContainerProvider"/>
 
     <super-source path="super"/>
     <super-source includes="java/io/" path=""/>

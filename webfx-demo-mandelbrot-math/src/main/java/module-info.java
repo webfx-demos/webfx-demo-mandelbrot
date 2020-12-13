@@ -6,7 +6,7 @@ module webfx.demo.mandelbrot.math {
     requires java.base;
 
     // Exported packages
-    exports webfx.demo.mandelbrot.math;
-    exports webfx.demo.mandelbrot.math.original;
+    exports dev.webfx.demo.mandelbrot.math;
+    exports dev.webfx.demo.mandelbrot.math.original;
 
 }

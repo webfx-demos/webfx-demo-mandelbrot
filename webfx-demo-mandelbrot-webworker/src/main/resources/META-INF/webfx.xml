@@ -4,7 +4,7 @@
         <![CDATA[
 [
   {
-    "name" : "webfx.demo.mandelbrot.webworker.MandelbrotWebWorker",
+    "name" : "dev.webfx.demo.mandelbrot.webworker.MandelbrotWebWorker",
     "methods" : [
       { "name" : "<init>", "parameterTypes" : [] }
     ]

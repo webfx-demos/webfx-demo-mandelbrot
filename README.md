@@ -19,6 +19,6 @@ such as web workers and WebAssembly modules, which can be useful for application
 WebFx can interact with third-party web workers and WebAssembly modules or you can write your own in Java.
 In this demo, they are written in Java and compiled with [TeaVM][teavm-website].
 
-[demo-live-link]: https://mandelbrot.webfx-project.org
+[demo-live-link]: https://mandelbrot.webfx.dev
 [mandelbrot-computation-source]: http://math.hws.edu/eck/js/mandelbrot/java/xMandelbrotSource-1-2/edu/hws/eck/umb/
 [teavm-website]: http://teavm.org/

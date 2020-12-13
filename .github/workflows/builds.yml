@@ -32,7 +32,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        app: [{name: 'Mandelbrot', module-token: 'webfx-demo-mandelbrot', gwt-token: 'webfx_demo_mandelbrot', web-push-branch: 'mandelbrot', ios-bundle-id: 'org.webfx.demo.mandelbrot', version: '0.1.0-SNAPSHOT'}]
+        app: [{name: 'Mandelbrot', module-token: 'webfx-demo-mandelbrot', gwt-token: 'webfx_demo_mandelbrot', web-push-branch: 'mandelbrot', ios-bundle-id: 'dev.webfx.demo.mandelbrot', version: '0.1.0-SNAPSHOT'}]
         os-config:  [1, 2, 3, 4]
         include:
           - os-config: 1 # Generates builds 1) 2) 3) 4) & 5)
@@ -294,7 +294,7 @@ jobs:
         name: Create Windows Installer (msi)
         run: |
           mvn -B javafx:jlink
-          ${{ env.JAVA_HOME }}\bin\jpackage --input .\target\ --name ${{ env.app-name }} --main-jar ${{ matrix.app.module-token }}-application-javafx-${{ matrix.app.version }}.jar --main-class webfx.platform.shared.services.appcontainer.ApplicationContainer --type msi --runtime-image .\target\jlinkImage --app-version 0.0.0 --win-per-user-install --win-menu --win-menu-group WebFx
+          ${{ env.JAVA_HOME }}\bin\jpackage --input .\target\ --name ${{ env.app-name }} --main-jar ${{ matrix.app.module-token }}-application-javafx-${{ matrix.app.version }}.jar --main-class dev.webfx.platform.shared.services.appcontainer.ApplicationContainer --type msi --runtime-image .\target\jlinkImage --app-version 0.0.0 --win-per-user-install --win-menu --win-menu-group WebFx
         working-directory: ${{ env.app-javafx-module-dir }}
 
       # Staging 9)

@@ -11,7 +11,20 @@
     </parent>
 
     <artifactId>webfx-demo-mandelbrot</artifactId>
+
     <packaging>pom</packaging>
+
+    <repositories>
+
+        <!-- For WebFx snapshots download (including webfx-parent) -->
+        <repository>
+            <id>webfx-snapshots</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+            <releases><enabled>false</enabled></releases>
+            <snapshots><enabled>true</enabled></snapshots>
+        </repository>
+
+    </repositories>
 
     <modules>
         <module>webfx-demo-mandelbrot-tracerframework</module>

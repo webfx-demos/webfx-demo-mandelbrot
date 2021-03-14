@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><module rename-to="webfx_demo_mandelbrot_application_gwt">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module rename-to="webfx_demo_mandelbrot_application_gwt">
 
     <!-- Configuring logging (must be in first position) -->
     <inherits name="com.google.gwt.logging.Logging"/>

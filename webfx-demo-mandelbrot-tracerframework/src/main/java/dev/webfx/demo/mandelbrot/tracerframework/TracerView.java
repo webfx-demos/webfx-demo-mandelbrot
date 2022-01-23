@@ -45,9 +45,9 @@ public class TracerView {
     private final static Background BLACK_BACKGROUND = new Background(new BackgroundFill(Color.BLACK, null, null));
     private final static Paint[] OVERLAY_FILLS = {
             Color.WHITE, Color.BLACK, Color.RED, Color.GREEN, Color.BLUE, Color.YELLOW, Color.CYAN, Color.PURPLE,
-            LinearGradient.valueOf("linear-gradient(to bottom, blue, green, red)"),
-            LinearGradient.valueOf("linear-gradient(to bottom, green, orange, brown)"),
-            LinearGradient.valueOf("linear-gradient(to bottom, red, purple, blue)"),
+            LinearGradient.valueOf("to bottom, blue, green, red"),
+            LinearGradient.valueOf("to bottom, green, orange, brown"),
+            LinearGradient.valueOf("to bottom, red, purple, blue"),
     };
     private Paint overlayFill = OVERLAY_FILLS[0];
 

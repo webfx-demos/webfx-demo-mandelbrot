@@ -16,7 +16,7 @@
 
     <repositories>
 
-        <!-- For WebFx snapshots download (including webfx-parent) -->
+        <!-- For WebFX snapshots download (including webfx-parent) -->
         <repository>
             <id>webfx-snapshots</id>
             <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
@@ -33,7 +33,7 @@
         <module>webfx-demo-mandelbrot-webworker-teavm</module>
         <module>webfx-demo-mandelbrot-webassembly-teavm</module>
         <module>webfx-demo-mandelbrot-application</module>
-        <module>webfx-demo-mandelbrot-application-javafx</module>
+        <module>webfx-demo-mandelbrot-application-openjfx</module>
         <module>webfx-demo-mandelbrot-application-gluon</module>
         <module>webfx-demo-mandelbrot-application-gwt</module>
     </modules>

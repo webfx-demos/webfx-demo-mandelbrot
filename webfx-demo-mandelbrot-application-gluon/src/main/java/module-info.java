@@ -4,7 +4,7 @@ module webfx.demo.mandelbrot.application.gluon {
 
     // Direct dependencies modules
     requires webfx.demo.mandelbrot.application;
-    requires webfx.kit.javafx;
+    requires webfx.kit.openjfx;
     requires webfx.platform.java.appcontainer.impl;
     requires webfx.platform.java.scheduler.impl;
     requires webfx.platform.java.shutdown.impl;

@@ -74,7 +74,7 @@
     <!-- used by webfx-demo-mandelbrot-application-gwt (EMULATION) -->
     <!--====================================< gwt-user >====================================-->
     <!-- used by webfx-kit-javafxgraphics-peers-gwt (SOURCE) -->
-    <!-- used by webfx-platform-gwt-appcontainer-impl (SOURCE) -->
+    <!-- used by webfx-platform-gwt-boot-impl (SOURCE) -->
     <!-- used by webfx-platform-gwt-emul-javabase (SOURCE) -->
     <!-- used by webfx-platform-gwt-json-impl (SOURCE) -->
     <!-- used by webfx-platform-gwt-resource-impl (SOURCE) -->
@@ -156,9 +156,9 @@
     <!-- used by webfx-demo-mandelbrot-webworker (SOURCE) -->
     <source path="dev/webfx/platform/client/services/webassembly"/>
     <source path="dev/webfx/platform/client/services/webassembly/spi"/>
-    <!--======================< webfx-platform-gwt-appcontainer-impl >======================-->
+    <!--==========================< webfx-platform-gwt-boot-impl >==========================-->
     <!-- used by webfx-demo-mandelbrot-application-gwt (IMPLICIT_PROVIDER) -->
-    <source path="dev/webfx/platform/gwt/services/appcontainer/spi/impl"/>
+    <source path="dev/webfx/platform/gwt/services/boot/spi/impl"/>
     <!--==========================< webfx-platform-gwt-json-impl >==========================-->
     <!-- used by webfx-demo-mandelbrot-application-gwt (IMPLICIT_PROVIDER) -->
     <source path="dev/webfx/platform/gwt/services/json/spi/impl"/>
@@ -177,13 +177,13 @@
     <!--=======================< webfx-platform-gwt-webworker-impl >========================-->
     <!-- used by webfx-demo-mandelbrot-application-gwt (IMPLICIT_PROVIDER) -->
     <source path="dev/webfx/platform/gwt/services/webworker/spi/impl"/>
-    <!--=======================< webfx-platform-shared-appcontainer >=======================-->
+    <!--===========================< webfx-platform-shared-boot >===========================-->
     <!-- used by webfx-kit-launcher (SOURCE) -->
-    <!-- used by webfx-platform-gwt-appcontainer-impl (SOURCE) -->
+    <!-- used by webfx-platform-gwt-boot-impl (SOURCE) -->
     <!-- used by webfx-platform-gwt-resource-impl (SOURCE) -->
-    <source path="dev/webfx/platform/shared/services/appcontainer"/>
-    <source path="dev/webfx/platform/shared/services/appcontainer/spi"/>
-    <source path="dev/webfx/platform/shared/services/appcontainer/spi/impl"/>
+    <source path="dev/webfx/platform/shared/services/boot"/>
+    <source path="dev/webfx/platform/shared/services/boot/spi"/>
+    <source path="dev/webfx/platform/shared/services/boot/spi/impl"/>
     <!--===========================< webfx-platform-shared-json >===========================-->
     <!-- used by webfx-demo-mandelbrot-tracerframework (SOURCE) -->
     <!-- used by webfx-platform-gwt-json-impl (SOURCE) -->
@@ -197,7 +197,7 @@
     <!-- used by webfx-kit-launcher (SOURCE) -->
     <!-- used by webfx-platform-gwt-log-impl (SOURCE) -->
     <!-- used by webfx-platform-gwt-uischeduler-impl (SOURCE) -->
-    <!-- used by webfx-platform-shared-appcontainer (SOURCE) -->
+    <!-- used by webfx-platform-shared-boot (SOURCE) -->
     <source path="dev/webfx/platform/shared/services/log"/>
     <source path="dev/webfx/platform/shared/services/log/spi"/>
     <!--=========================< webfx-platform-shared-resource >=========================-->
@@ -212,14 +212,14 @@
     <!--=========================< webfx-platform-shared-shutdown >=========================-->
     <!-- used by webfx-kit-javafxgraphics-emul (SOURCE) -->
     <!-- used by webfx-platform-gwt-shutdown-impl (SOURCE) -->
-    <!-- used by webfx-platform-shared-appcontainer (SOURCE) -->
+    <!-- used by webfx-platform-shared-boot (SOURCE) -->
     <source path="dev/webfx/platform/shared/services/shutdown"/>
     <source path="dev/webfx/platform/shared/services/shutdown/spi"/>
     <source path="dev/webfx/platform/shared/services/shutdown/spi/impl"/>
     <!--===========================< webfx-platform-shared-util >===========================-->
     <!-- used by webfx-kit-javafxgraphics-emul (SOURCE) -->
     <!-- used by webfx-kit-javafxgraphics-peers (SOURCE) -->
-    <!-- used by webfx-platform-shared-appcontainer (SOURCE) -->
+    <!-- used by webfx-platform-shared-boot (SOURCE) -->
     <!-- used by webfx-platform-shared-json (SOURCE) -->
     <!-- used by webfx-platform-shared-log (SOURCE) -->
     <!-- used by webfx-platform-shared-resource (SOURCE) -->
@@ -244,7 +244,7 @@
     <set-property name="jre.checks.checkLevel" value="MINIMAL"/>
 
     <!-- Specify the app entry point class. -->
-    <entry-point class="dev.webfx.platform.gwt.services.appcontainer.spi.impl.GwtApplicationContainerProvider"/>
+    <entry-point class="dev.webfx.platform.gwt.services.boot.spi.impl.GwtApplicationBooterProvider"/>
 
     <super-source path="super"/>
     <super-source includes="java/io/" path=""/>

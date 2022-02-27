@@ -70,8 +70,6 @@
     <!--=================================< elemental2-svg >=================================-->
     <!-- used by webfx-kit-javafxgraphics-peers-gwt (SOURCE) -->
     <inherits name="elemental2.svg.Svg"/>
-    <!--====================================< gwt-time >====================================-->
-    <!-- used by webfx-demo-mandelbrot-application-gwt (EMULATION) -->
     <!--====================================< gwt-user >====================================-->
     <!-- used by webfx-kit-javafxgraphics-peers-gwt (SOURCE) -->
     <!-- used by webfx-platform-gwt-boot-impl (SOURCE) -->
@@ -80,10 +78,6 @@
     <!-- used by webfx-platform-gwt-resource-impl (SOURCE) -->
     <!-- used by webfx-platform-gwt-uischeduler-impl (SOURCE) -->
     <inherits name="com.google.gwt.user.User"/>
-    <!--===================================< java-base >====================================-->
-    <!-- used by webfx-platform-gwt-emul-javabase (SOURCE) -->
-    <!-- used by webfx-platform-shared-shutdown (SOURCE) -->
-    <!-- used by webfx-platform-shared-util (SOURCE) -->
     <!--==================================< java-logging >==================================-->
     <!-- used by webfx-platform-shared-util (SOURCE) -->
     <inherits name="com.google.gwt.logging.Logging"/>
@@ -91,8 +85,6 @@
     <!-- used by webfx-kit-javafxgraphics-emul (SOURCE) -->
     <!-- used by webfx-platform-gwt-emul-javabase (SOURCE) -->
     <inherits name="org.gwtproject.nio.GwtNioSupport"/>
-    <!--==================================< javafx-base >===================================-->
-    <!-- used by webfx-kit-javafxgraphics-peers-base (SOURCE) -->
     <!--=======================< webfx-demo-mandelbrot-application >========================-->
     <!-- used by webfx-demo-mandelbrot-application-gwt (APPLICATION) -->
     <source path="dev/webfx/demo/mandelbrot"/>

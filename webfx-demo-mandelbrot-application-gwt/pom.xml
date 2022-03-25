@@ -272,11 +272,6 @@
     <build>
         <plugins>
 
-            <!-- Generating the source artifact for another GWT compilation (ex: KBS) -->
-            <plugin>
-                <artifactId>maven-source-plugin</artifactId>
-            </plugin>
-
             <plugin>
                 <artifactId>maven-antrun-plugin</artifactId>
                 <version>3.0.0</version>

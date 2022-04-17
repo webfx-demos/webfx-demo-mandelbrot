@@ -1,8 +1,24 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <project executable="true">
 
     <dependencies>
         <used-by-source-modules/>
     </dependencies>
+
+    <maven-pom-manual>
+        <properties>
+            <plugin.teavm.param.mainClass>dev.webfx.demo.mandelbrot.webassembly.teavm.TeaVmMandelbrotWebAssemblyEntryPoints</plugin.teavm.param.mainClass>
+            <plugin.teavm.param.targetType>WEBASSEMBLY</plugin.teavm.param.targetType>
+        </properties>
+
+        <build>
+            <plugins>
+                <plugin>
+                    <groupId>org.teavm</groupId>
+                    <artifactId>teavm-maven-plugin</artifactId>
+                </plugin>
+            </plugins>
+        </build>
+    </maven-pom-manual>
 
 </project>

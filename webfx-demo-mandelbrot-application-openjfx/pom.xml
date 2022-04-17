@@ -1,75 +1,79 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- File managed by WebFX (DO NOT EDIT MANUALLY) -->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
     <parent>
-        <artifactId>webfx-demo-mandelbrot</artifactId>
         <groupId>dev.webfx</groupId>
+        <artifactId>webfx-demo-mandelbrot</artifactId>
         <version>0.1.0-SNAPSHOT</version>
     </parent>
-    <modelVersion>4.0.0</modelVersion>
 
     <artifactId>webfx-demo-mandelbrot-application-openjfx</artifactId>
 
-    <dependencies> <!-- Dependencies managed by WebFX (DO NOT EDIT MANUALLY) -->
+    <dependencies>
 
         <dependency>
             <groupId>dev.webfx</groupId>
             <artifactId>webfx-demo-mandelbrot-application</artifactId>
             <version>0.1.0-SNAPSHOT</version>
         </dependency>
-    
+
         <dependency>
             <groupId>dev.webfx</groupId>
             <artifactId>webfx-kit-openjfx</artifactId>
             <version>0.1.0-SNAPSHOT</version>
         </dependency>
-    
+
         <dependency>
             <groupId>dev.webfx</groupId>
             <artifactId>webfx-platform-java-boot-impl</artifactId>
             <version>0.1.0-SNAPSHOT</version>
         </dependency>
-    
+
         <dependency>
             <groupId>dev.webfx</groupId>
             <artifactId>webfx-platform-java-scheduler-impl</artifactId>
             <version>0.1.0-SNAPSHOT</version>
         </dependency>
-    
+
         <dependency>
             <groupId>dev.webfx</groupId>
             <artifactId>webfx-platform-java-shutdown-impl</artifactId>
             <version>0.1.0-SNAPSHOT</version>
         </dependency>
-    
+
         <dependency>
             <groupId>dev.webfx</groupId>
             <artifactId>webfx-platform-java-webworker-impl</artifactId>
             <version>0.1.0-SNAPSHOT</version>
         </dependency>
-    
+
         <dependency>
             <groupId>dev.webfx</groupId>
             <artifactId>webfx-platform-shared-json-impl</artifactId>
             <version>0.1.0-SNAPSHOT</version>
         </dependency>
-    
+
         <dependency>
             <groupId>dev.webfx</groupId>
             <artifactId>webfx-platform-shared-log-impl-simple</artifactId>
             <version>0.1.0-SNAPSHOT</version>
         </dependency>
-    
+
     </dependencies>
 
     <properties>
-        <plugin.javapackager.name>Mandelbrot</plugin.javapackager.name>
-        <plugin.javapackager.displayName>Mandelbrot</plugin.javapackager.displayName>
-        <plugin.javapackager.url>https://mandelbrot.webfx.dev</plugin.javapackager.url>
+        <plugin.javapackager.name>webfx-demo-mandelbrot</plugin.javapackager.name>
+        <plugin.javapackager.displayName>webfx-demo-mandelbrot</plugin.javapackager.displayName>
+        <plugin.javapackager.url/>
     </properties>
 
     <build>
         <plugins>
-            <!-- This plugin must be ran explicitly by invoking mvn javafx:jlink -->
+            <!-- This plugin is run only explicitly by invoking mvn javafx:jlink -->
             <plugin>
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-maven-plugin</artifactId>
@@ -78,7 +82,7 @@
     </build>
 
     <profiles>
-        <!-- profile to make a fat standalone executable jar with all dependent libraries included inside -->
+        <!-- profile to make a fat standalone executable jar with all dependencies included inside -->
         <profile>
             <id>openjfx-fatjar</id>
             <activation>

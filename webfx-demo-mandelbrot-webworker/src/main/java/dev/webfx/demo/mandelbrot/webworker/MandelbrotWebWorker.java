@@ -26,7 +26,7 @@ public class MandelbrotWebWorker extends JavaCodedWebWorkerBase {
     public void onLoaded() {
         if (WebAssembly.isSupported()) {
             Future<WebAssemblyInstance> future = WebAssembly.loadAndInstantiate("classes.wasm"/*, new WebAssemblyImport("mandelbrot", "setPixelIteration", this::setPixelIteration)*/);
-            future.setHandler(ar -> {
+            future.onComplete(ar -> {
                 webAssemblyInstance = ar.result();
                 outputBufferReader = webAssemblyInstance.getDataReader(0);
             });

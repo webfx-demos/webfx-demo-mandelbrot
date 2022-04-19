@@ -168,6 +168,10 @@
     <!--=======================< webfx-platform-gwt-webworker-impl >========================-->
     <!-- used by webfx-demo-mandelbrot-application-gwt (IMPLICIT_PROVIDER) -->
     <source path="dev/webfx/platform/gwt/services/webworker/spi/impl"/>
+    <!--==========================< webfx-platform-shared-async >===========================-->
+    <!-- used by webfx-platform-client-webassembly (SOURCE) -->
+    <source path="dev/webfx/platform/shared/async"/>
+    <source path="dev/webfx/platform/shared/async/impl"/>
     <!--===========================< webfx-platform-shared-boot >===========================-->
     <!-- used by webfx-kit-launcher (SOURCE) -->
     <!-- used by webfx-platform-gwt-boot-impl (SOURCE) -->
@@ -212,8 +216,6 @@
     <!-- used by webfx-platform-shared-shutdown (SOURCE) -->
     <!-- used by webfx-platform-shared-webworker (SOURCE) -->
     <source path="dev/webfx/platform/shared/util"/>
-    <source path="dev/webfx/platform/shared/util/async"/>
-    <source path="dev/webfx/platform/shared/util/async/impl"/>
     <source path="dev/webfx/platform/shared/util/collection"/>
     <source path="dev/webfx/platform/shared/util/function"/>
     <source path="dev/webfx/platform/shared/util/noreflect"/>

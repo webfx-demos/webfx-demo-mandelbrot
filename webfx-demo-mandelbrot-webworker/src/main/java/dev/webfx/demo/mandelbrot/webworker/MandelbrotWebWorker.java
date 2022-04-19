@@ -7,7 +7,7 @@ import dev.webfx.platform.client.services.webassembly.WebAssemblyMemoryBufferRea
 import dev.webfx.platform.shared.services.json.Json;
 import dev.webfx.platform.shared.services.json.JsonObject;
 import dev.webfx.platform.shared.services.webworker.spi.base.JavaCodedWebWorkerBase;
-import dev.webfx.platform.shared.util.async.Future;
+import dev.webfx.platform.shared.async.Future;
 
 /**
  * @author Bruno Salmon

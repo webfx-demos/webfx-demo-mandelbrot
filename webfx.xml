@@ -3,6 +3,10 @@
 
     <parent name="webfx-stack-platform"/>
 
+    <update-options>
+        <generate-export-snapshot/>
+    </update-options>
+
     <modules>
         <module>webfx-demo-mandelbrot-tracerframework</module>
         <module>webfx-demo-mandelbrot-math</module>
@@ -19,14 +23,217 @@
         <group>
             <groupId>dev.webfx</groupId>
             <version>0.1.0-SNAPSHOT</version>
-            <webfx-library name="webfx"/>
-            <webfx-library name="webfx-lib-odometer"/>
-            <!--
-            <webfx-library name="webfx-platform-feature-webworker"/>
-            <webfx-library name="webfx-platform-feature-webassembly"/>
-            -->
             <webfx-library name="webfx-stack-platform"/>
+            <webfx-library name="webfx-lib-odometer"/>
         </group>
     </required-libraries>
+
+    <!--
+
+     ******************************************************************************************************************* 
+     ******************************* Section managed by WebFX (DO NOT EDIT MANUALLY) *********************************** 
+     ******************************************************************************************************************* 
+
+     <export-snapshot> allows a much faster import of this WebFX library into another project. It's a self-contained
+     image of this and children modules. All information required for the import of this library is present in this
+     single file. The export snapshot is optional, and a WebFX library that doesn't generate it can still be imported
+     into another project, but WebFX will then need to download all individual webfx.xml files for every children
+     modules, together with their pom and sources. Knowing that each download requires a maven invocation that takes
+     at least 3s (sometimes 10s or more), the export snapshot brings a significant performance improvement in the
+     import process.
+
+     -->
+
+    <export-snapshot>
+
+        <project name="webfx-demo-mandelbrot">
+
+            <parent name="webfx-stack-platform"/>
+
+            <modules>
+                <module>webfx-demo-mandelbrot-tracerframework</module>
+                <module>webfx-demo-mandelbrot-math</module>
+                <module>webfx-demo-mandelbrot-webworker</module>
+                <module>webfx-demo-mandelbrot-webworker-teavm</module>
+                <module>webfx-demo-mandelbrot-webassembly-teavm</module>
+                <module>webfx-demo-mandelbrot-application</module>
+                <module>webfx-demo-mandelbrot-application-openjfx</module>
+                <module>webfx-demo-mandelbrot-application-gluon</module>
+                <module>webfx-demo-mandelbrot-application-gwt</module>
+            </modules>
+
+            <required-libraries>
+                <group>
+                    <groupId>dev.webfx</groupId>
+                    <version>0.1.0-SNAPSHOT</version>
+                    <webfx-library name="webfx-stack-platform"/>
+                    <webfx-library name="webfx-lib-odometer"/>
+                </group>
+            </required-libraries>
+
+        </project>
+
+        <project name="webfx-demo-mandelbrot-tracerframework">
+
+            <exported-packages>
+                <source-packages/>
+            </exported-packages>
+
+            <dependencies>
+                <used-by-source-modules>
+                    <module>java.base</module>
+                    <module>webfx-kit-javafxbase-emul</module>
+                    <module>webfx-kit-javafxgraphics-emul</module>
+                    <module>webfx-lib-odometer</module>
+                    <module>webfx-platform-client-uischeduler</module>
+                    <module>webfx-platform-shared-json</module>
+                    <module>webfx-platform-shared-log</module>
+                    <module>webfx-platform-shared-webworker</module>
+                </used-by-source-modules>
+            </dependencies>
+
+            <source-packages>
+                <package>dev.webfx.demo.mandelbrot.tracerframework</package>
+            </source-packages>
+
+        </project>
+
+        <project name="webfx-demo-mandelbrot-math">
+
+            <exported-packages>
+                <source-packages/>
+            </exported-packages>
+
+            <dependencies>
+                <used-by-source-modules>
+                    <module>java.base</module>
+                </used-by-source-modules>
+            </dependencies>
+
+            <source-packages>
+                <package>dev.webfx.demo.mandelbrot.math.original</package>
+                <package>dev.webfx.demo.mandelbrot.math</package>
+            </source-packages>
+
+        </project>
+
+        <project name="webfx-demo-mandelbrot-webworker">
+
+            <exported-packages>
+                <source-packages/>
+            </exported-packages>
+
+            <dependencies>
+                <used-by-source-modules>
+                    <module>webfx-demo-mandelbrot-math</module>
+                    <module>webfx-platform-client-webassembly</module>
+                    <module>webfx-platform-shared-async</module>
+                    <module>webfx-platform-shared-json</module>
+                    <module>webfx-platform-shared-webworker</module>
+                </used-by-source-modules>
+            </dependencies>
+
+            <graalvm-reflection-json>
+        <![CDATA[
+[
+  {
+    "name" : "dev.webfx.demo.mandelbrot.webworker.MandelbrotWebWorker",
+    "methods" : [
+      { "name" : "<init>", "parameterTypes" : [] }
+    ]
+  }
+]
+        ]]>
+            </graalvm-reflection-json>
+
+            <source-packages>
+                <package>dev.webfx.demo.mandelbrot.webworker</package>
+            </source-packages>
+
+        </project>
+
+        <project executable="true" name="webfx-demo-mandelbrot-webworker-teavm">
+
+            <dependencies>
+                <used-by-source-modules>
+                    <module>webfx-demo-mandelbrot-webworker</module>
+                    <module>webfx-platform-teavm-webworker-impl</module>
+                </used-by-source-modules>
+            </dependencies>
+
+            <source-packages>
+                <package>dev.webfx.demo.mandelbrot.webworker.teavm</package>
+            </source-packages>
+
+        </project>
+
+        <project executable="true" name="webfx-demo-mandelbrot-webassembly-teavm">
+
+            <dependencies>
+                <used-by-source-modules>
+                    <module>teavm-interop</module>
+                    <module>webfx-demo-mandelbrot-math</module>
+                </used-by-source-modules>
+            </dependencies>
+
+            <source-packages>
+                <package>dev.webfx.demo.mandelbrot.webassembly.teavm</package>
+            </source-packages>
+
+        </project>
+
+        <project name="webfx-demo-mandelbrot-application">
+
+            <exported-packages>
+                <source-packages/>
+            </exported-packages>
+
+            <providers>
+                <javafx.application.Application>dev.webfx.demo.mandelbrot.MandelbrotApplication</javafx.application.Application>
+            </providers>
+
+            <dependencies>
+                <used-by-source-modules>
+                    <module>java.base</module>
+                    <module>webfx-demo-mandelbrot-math</module>
+                    <module>webfx-demo-mandelbrot-tracerframework</module>
+                    <module>webfx-demo-mandelbrot-webworker</module>
+                    <module>webfx-kit-javafxgraphics-emul</module>
+                    <module>webfx-platform-shared-json</module>
+                    <module>webfx-platform-shared-webworker</module>
+                </used-by-source-modules>
+            </dependencies>
+
+            <source-packages>
+                <package>dev.webfx.demo.mandelbrot</package>
+            </source-packages>
+
+        </project>
+
+        <project executable="true" name="webfx-demo-mandelbrot-application-openjfx">
+
+            <dependencies>
+                <used-by-source-modules/>
+            </dependencies>
+
+        </project>
+
+        <project executable="true" name="webfx-demo-mandelbrot-application-gluon">
+
+            <dependencies>
+                <used-by-source-modules/>
+            </dependencies>
+
+        </project>
+
+        <project executable="true" name="webfx-demo-mandelbrot-application-gwt">
+
+            <dependencies>
+                <used-by-source-modules/>
+            </dependencies>
+
+        </project>
+
+    </export-snapshot>
 
 </project>

@@ -23,7 +23,7 @@ import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
-import dev.webfx.demo.mandelbrot.tracerframework.TracerView;
+import dev.webfx.lib.tracerframework.TracerView;
 
 /**
  * @author Bruno Salmon

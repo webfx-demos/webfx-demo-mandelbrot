@@ -80,7 +80,7 @@ jobs:
       app-gwt-module-dir:        ./${{ matrix.app.module-token }}-application-gwt
       app-gwt-build-dir:         ./${{ matrix.app.module-token }}-application-gwt/target/${{ matrix.app.module-token }}-application-gwt-${{ matrix.app.version }}/${{ matrix.app.gwt-token }}_application_gwt
       app-gluon-module-dir:      ./${{ matrix.app.module-token }}-application-gluon
-      web-push-repository-name:  'webfx-website-netlify'
+      web-push-repository-name:  'webfx-netlify'
       web-push-repository-owner: 'webfx-project'
       web-push-username: ${{ github.actor }}
       web-push-email: ${{ secrets.API_GITHUB_EMAIL }}

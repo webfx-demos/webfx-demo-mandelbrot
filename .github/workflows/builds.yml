@@ -140,19 +140,19 @@ jobs:
 
       # Building this repository with JDK 13+ (Java 11 target)
       - name: Build this repository (no OpenJFX fat jar - no GWT build)
-        run: mvn -B -P '!gwt-compile,!openjfx-fatjar,!javapackager' install
+        run: mvn -B -P '!gwt-compile,!openjfx-fatjar,!openjfx-desktop' install
         working-directory: ${{ env.app-repo-dir }}
 
       # Building this repository with JDK 13+ (Java 11 target) including a GWT compilation (if required)
       - if: matrix.web-artifact-suffix != null
         name: Build this application (OpenJFX fat jar + GWT build)
-        run: mvn -B -P 'gwt-compile,openjfx-fatjar,javapackager' package
+        run: mvn -B -P 'gwt-compile,openjfx-fatjar,openjfx-desktop' package
         working-directory: ${{ env.app-parent-module-dir }}
 
       # Or building this repository with JDK 13+ (Java 11 target) excluding a GWT compilation
       - if: matrix.web-artifact-suffix == null
         name: Build this application (OpenJFX fat jar - no GWT build)
-        run: mvn -B -P '!gwt-compile,openjfx-fatjar,javapackager' package
+        run: mvn -B -P '!gwt-compile,openjfx-fatjar,openjfx-desktop' package
         working-directory: ${{ env.app-parent-module-dir }}
 
 

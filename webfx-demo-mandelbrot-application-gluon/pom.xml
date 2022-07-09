@@ -13,6 +13,8 @@
 
     <artifactId>webfx-demo-mandelbrot-application-gluon</artifactId>
 
+    <name>WebFXDemoMandelbrot</name>
+
     <dependencies>
 
         <dependency>

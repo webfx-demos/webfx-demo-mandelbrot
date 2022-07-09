@@ -66,8 +66,8 @@
     </dependencies>
 
     <properties>
-        <plugin.javapackager.name>webfx-demo-mandelbrot</plugin.javapackager.name>
-        <plugin.javapackager.displayName>webfx-demo-mandelbrot</plugin.javapackager.displayName>
+        <plugin.javapackager.name>WebFXDemoMandelbrot</plugin.javapackager.name>
+        <plugin.javapackager.displayName>WebFX Demo Mandelbrot</plugin.javapackager.displayName>
         <plugin.javapackager.url/>
     </properties>
 

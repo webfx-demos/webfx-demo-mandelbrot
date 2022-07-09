@@ -32,7 +32,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        app: [{name: 'Mandelbrot', module-token: 'webfx-demo-mandelbrot', gwt-token: 'webfx_demo_mandelbrot', web-push-branch: 'mandelbrot', ios-bundle-id: 'dev.webfx.demo.mandelbrot', version: '0.1.0-SNAPSHOT'}]
+        app: [{name: 'Mandelbrot', module-token: 'webfx-demo-mandelbrot', gwt-token: 'webfx_demo_mandelbrot', gluon-token: 'WebFXDemoMandelbrot', web-push-branch: 'mandelbrot', ios-bundle-id: 'dev.webfx.demo.mandelbrot', version: '0.1.0-SNAPSHOT'}]
         os-config:  [1, 2, 3, 4]
         include:
           - os-config: 1 # Generates builds 1) 2) 3) 4) & 5)
@@ -313,7 +313,7 @@ jobs:
       # Staging 5) | 14)
       - if: matrix.gluon-desktop-artifact-suffix != null && runner.os != 'Windows'
         name: Copy native Desktop to staging (Linux or MacOS)
-        run: cp ${{ env.app-gluon-module-dir }}/target/gluonfx/${{ matrix.gluon-desktop-arch-token }}/${{ matrix.app.module-token }}* staging/${{ env.app-name }}-${{ matrix.gluon-desktop-artifact-suffix }}
+        run: cp ${{ env.app-gluon-module-dir }}/target/gluonfx/${{ matrix.gluon-desktop-arch-token }}/${{ matrix.app.gluon-token }}* staging/${{ env.app-name }}-${{ matrix.gluon-desktop-artifact-suffix }}
 
       # Staging 10)
       - if: matrix.gluon-desktop-artifact-suffix != null && runner.os == 'Windows'

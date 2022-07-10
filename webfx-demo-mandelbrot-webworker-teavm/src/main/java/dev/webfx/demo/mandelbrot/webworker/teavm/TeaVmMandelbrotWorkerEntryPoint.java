@@ -2,7 +2,7 @@ package dev.webfx.demo.mandelbrot.webworker.teavm;
 
 
 import dev.webfx.demo.mandelbrot.webworker.MandelbrotWebWorker;
-import dev.webfx.platform.teavm.services.webworker.spi.impl.TeaVmRunningWebWorker;
+import dev.webfx.stack.platform.webworker.spi.impl.teavm.TeaVmRunningWebWorker;
 
 /**
  * @author Bruno Salmon

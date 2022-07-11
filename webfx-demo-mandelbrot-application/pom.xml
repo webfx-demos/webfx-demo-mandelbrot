@@ -41,13 +41,13 @@
 
         <dependency>
             <groupId>dev.webfx</groupId>
-            <artifactId>webfx-platform-shared-json</artifactId>
+            <artifactId>webfx-stack-platform-json</artifactId>
             <version>0.1.0-SNAPSHOT</version>
         </dependency>
 
         <dependency>
             <groupId>dev.webfx</groupId>
-            <artifactId>webfx-platform-shared-webworker</artifactId>
+            <artifactId>webfx-stack-platform-webworker</artifactId>
             <version>0.1.0-SNAPSHOT</version>
         </dependency>
 

@@ -7,7 +7,7 @@ import dev.webfx.stack.platform.webassembly.WebAssemblyMemoryBufferReader;
 import dev.webfx.stack.platform.json.Json;
 import dev.webfx.stack.platform.json.JsonObject;
 import dev.webfx.stack.platform.webworker.spi.base.JavaCodedWebWorkerBase;
-import dev.webfx.stack.platform.async.Future;
+import dev.webfx.stack.async.Future;
 
 /**
  * @author Bruno Salmon

@@ -106,13 +106,8 @@
     <source path="dev/webfx/platform/client/services/uischeduler"/>
     <source path="dev/webfx/platform/client/services/uischeduler/spi"/>
     <source path="dev/webfx/platform/client/services/uischeduler/spi/impl"/>
-    <!--=======================< webfx-platform-client-webassembly >========================-->
-    <source path="dev/webfx/stack/platform/webassembly"/>
-    <source path="dev/webfx/stack/platform/webassembly/spi"/>
     <!--==========================< webfx-platform-gwt-boot-impl >==========================-->
     <source path="dev/webfx/platform/gwt/services/boot/spi/impl"/>
-    <!--==========================< webfx-platform-gwt-json-impl >==========================-->
-    <source path="dev/webfx/stack/platform/json/spi/impl/gwt"/>
     <!--==========================< webfx-platform-gwt-log-impl >===========================-->
     <source path="dev/webfx/platform/gwt/services/log/spi/impl"/>
     <!--========================< webfx-platform-gwt-resource-impl >========================-->
@@ -121,22 +116,10 @@
     <source path="dev/webfx/platform/gwt/services/shutdown/spi/impl"/>
     <!--======================< webfx-platform-gwt-uischeduler-impl >=======================-->
     <source path="dev/webfx/platform/gwt/services/uischeduler/spi/impl"/>
-    <!--=======================< webfx-platform-gwt-webworker-impl >========================-->
-    <source path="dev/webfx/stack/platform/webworker/spi/impl/gwt"/>
-    <!--==========================< webfx-platform-shared-async >===========================-->
-    <source path="dev/webfx/stack/platform/async"/>
-    <source path="dev/webfx/stack/platform/async/impl"/>
     <!--===========================< webfx-platform-shared-boot >===========================-->
     <source path="dev/webfx/platform/shared/services/boot"/>
     <source path="dev/webfx/platform/shared/services/boot/spi"/>
     <source path="dev/webfx/platform/shared/services/boot/spi/impl"/>
-    <!--===========================< webfx-platform-shared-json >===========================-->
-    <source path="dev/webfx/stack/platform/json"/>
-    <source path="dev/webfx/stack/platform/json/parser"/>
-    <source path="dev/webfx/stack/platform/json/parser/javacup"/>
-    <source path="dev/webfx/stack/platform/json/parser/jflex"/>
-    <source path="dev/webfx/stack/platform/json/spi"/>
-    <source path="dev/webfx/stack/platform/json/spi/impl/listmap"/>
     <!--===========================< webfx-platform-shared-log >============================-->
     <source path="dev/webfx/platform/shared/services/log"/>
     <source path="dev/webfx/platform/shared/services/log/spi"/>
@@ -158,11 +141,28 @@
     <source path="dev/webfx/platform/shared/util/serviceloader"/>
     <source path="dev/webfx/platform/shared/util/tuples"/>
     <source path="dev/webfx/platform/shared/util/uuid"/>
-    <!--========================< webfx-platform-shared-webworker >=========================-->
+    <!--===============================< webfx-stack-async >================================-->
+    <source path="dev/webfx/stack/async"/>
+    <source path="dev/webfx/stack/async/impl"/>
+    <!--===========================< webfx-stack-platform-json >============================-->
+    <source path="dev/webfx/stack/platform/json"/>
+    <source path="dev/webfx/stack/platform/json/parser"/>
+    <source path="dev/webfx/stack/platform/json/parser/javacup"/>
+    <source path="dev/webfx/stack/platform/json/parser/jflex"/>
+    <source path="dev/webfx/stack/platform/json/spi"/>
+    <source path="dev/webfx/stack/platform/json/spi/impl/listmap"/>
+    <!--=========================< webfx-stack-platform-json-gwt >==========================-->
+    <source path="dev/webfx/stack/platform/json/spi/impl/gwt"/>
+    <!--========================< webfx-stack-platform-webassembly >========================-->
+    <source path="dev/webfx/stack/platform/webassembly"/>
+    <source path="dev/webfx/stack/platform/webassembly/spi"/>
+    <!--=========================< webfx-stack-platform-webworker >=========================-->
     <source path="dev/webfx/stack/platform/webworker"/>
     <source path="dev/webfx/stack/platform/webworker/pool"/>
     <source path="dev/webfx/stack/platform/webworker/spi"/>
     <source path="dev/webfx/stack/platform/webworker/spi/base"/>
+    <!--=======================< webfx-stack-platform-webworker-gwt >=======================-->
+    <source path="dev/webfx/stack/platform/webworker/spi/impl/gwt"/>
     <set-property name="user.agent" value="safari"/> <!-- to make only 1 permutation for testing with Chrome -->
     <set-property name="jre.checks.checkLevel" value="MINIMAL"/>
 

@@ -8,8 +8,8 @@ module webfx.demo.mandelbrot.application.gluon {
     requires webfx.platform.java.boot.impl;
     requires webfx.platform.java.scheduler.impl;
     requires webfx.platform.java.shutdown.impl;
-    requires webfx.platform.java.webworker.impl;
-    requires webfx.platform.shared.json.impl;
     requires webfx.platform.shared.log.impl.simple;
+    requires webfx.stack.platform.json.java;
+    requires webfx.stack.platform.webworker.java;
 
 }

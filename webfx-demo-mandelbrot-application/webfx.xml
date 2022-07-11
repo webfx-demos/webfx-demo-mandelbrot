@@ -6,7 +6,7 @@
     </exported-packages>
 
     <providers>
-        <javafx.application.Application>dev.webfx.demo.mandelbrot.MandelbrotApplication</javafx.application.Application>
+        <provider interface="javafx.application.Application">dev.webfx.demo.mandelbrot.MandelbrotApplication</provider>
     </providers>
 
     <dependencies>

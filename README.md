@@ -9,14 +9,14 @@ In the settings, you can adjust the number of web workers and switch between Jav
 
 ## Reusability
 
-This demo demonstrates how you can reuse some java code from existing java applications, even if not written in JavaFx.
+This demo demonstrates how you can reuse some java code from existing java applications, even if not written in JavaFX.
 For example, the Mandelbrot computation code was taken from this [Java Swing application][mandelbrot-computation-source].
 
 ## Web workers and WebAssembly
 
-Since JavaFx was not originally designed for the web, WebFx provides some additional APIs to work with web-specific concepts
+Since JavaFX was not originally designed for the web, WebFX provides some additional APIs to work with web-specific concepts
 such as web workers and WebAssembly modules, which can be useful for applications requiring heavy background tasks.
-WebFx can interact with third-party web workers and WebAssembly modules or you can write your own in Java.
+WebFX can interact with third-party web workers and WebAssembly modules or you can write your own in Java.
 In this demo, they are written in Java and compiled with [TeaVM][teavm-website].
 
 [demo-live-link]: https://mandelbrot.webfx.dev

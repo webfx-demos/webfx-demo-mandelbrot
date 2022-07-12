@@ -44,7 +44,7 @@ public final class MandelbrotApplication extends Application {
 
         // Creating the scene with the specified size (this size is ignored if running in the browser)
         primaryStage.setScene(new Scene(new TracerView((int) w, (int) h, new MandelbrotPixelComputer()).buildView(), w, h));
-        primaryStage.setTitle("WebFx Mandelbrot");
+        primaryStage.setTitle("WebFX Mandelbrot");
         primaryStage.show();
     }
 }

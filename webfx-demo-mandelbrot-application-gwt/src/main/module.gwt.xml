@@ -41,7 +41,7 @@
     <source path="dev/webfx/kit/mapper/peers/javafxgraphics/emul_coupling"/>
     <source path="dev/webfx/kit/mapper/peers/javafxgraphics/emul_coupling/base"/>
     <source path="dev/webfx/kit/mapper/spi"/>
-    <source path="dev/webfx/kit/mapper/spi/base"/>
+    <source path="dev/webfx/kit/mapper/spi/impl/base"/>
     <source path="javafx/animation"/>
     <source path="javafx/application"/>
     <source path="javafx/css"/>
@@ -73,8 +73,8 @@
     <!--========================< webfx-demo-mandelbrot-webworker >=========================-->
     <source path="dev/webfx/demo/mandelbrot/webworker"/>
     <!--=================================< webfx-kit-gwt >==================================-->
-    <source path="dev/webfx/kit/launcher/spi/gwt"/>
-    <source path="dev/webfx/kit/mapper/spi/gwt"/>
+    <source path="dev/webfx/kit/launcher/spi/impl/gwt"/>
+    <source path="dev/webfx/kit/mapper/spi/impl/gwt"/>
     <!--=========================< webfx-kit-javafxgraphics-peers >=========================-->
     <source path="dev/webfx/kit/mapper/peers/javafxgraphics"/>
     <source path="dev/webfx/kit/mapper/peers/javafxgraphics/markers"/>
@@ -91,7 +91,7 @@
     <!--===============================< webfx-kit-launcher >===============================-->
     <source path="dev/webfx/kit/launcher"/>
     <source path="dev/webfx/kit/launcher/spi"/>
-    <source path="dev/webfx/kit/launcher/spi/base"/>
+    <source path="dev/webfx/kit/launcher/spi/impl/base"/>
     <!--=================================< webfx-kit-util >=================================-->
     <source path="dev/webfx/kit/util/properties"/>
     <source path="dev/webfx/kit/util/properties/conversion"/>

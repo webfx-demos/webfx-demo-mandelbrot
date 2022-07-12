@@ -5,7 +5,7 @@
       { "name" : "<init>", "parameterTypes" : [] }
     ]
   },    {
-        "name" : "dev.webfx.kit.launcher.spi.openjfx.JavaFxWebFxKitLauncherProvider$FxKitWrapperApplication",
+        "name" : "dev.webfx.kit.launcher.spi.impl.openjfx.JavaFxWebFxKitLauncherProvider$FxKitWrapperApplication",
         "methods" : [
             { "name" : "<init>", "parameterTypes" : [] }
         ]

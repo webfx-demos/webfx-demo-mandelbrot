@@ -7,9 +7,9 @@ module webfx.demo.mandelbrot.application.openjfx {
     requires webfx.kit.openjfx;
     requires webfx.platform.boot.java;
     requires webfx.platform.console.java;
+    requires webfx.platform.json.java;
     requires webfx.platform.scheduler.java;
     requires webfx.platform.shutdown.java;
-    requires webfx.stack.platform.json.java;
-    requires webfx.stack.platform.webworker.java;
+    requires webfx.platform.webworker.java;
 
 }

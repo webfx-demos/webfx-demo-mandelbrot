@@ -8,8 +8,8 @@ module webfx.demo.mandelbrot.application {
     requires webfx.demo.mandelbrot.math;
     requires webfx.demo.mandelbrot.webworker;
     requires webfx.lib.tracerframework;
-    requires webfx.stack.platform.json;
-    requires webfx.stack.platform.webworker;
+    requires webfx.platform.json;
+    requires webfx.platform.webworker;
 
     // Exported packages
     exports dev.webfx.demo.mandelbrot;

@@ -1,13 +1,13 @@
 package dev.webfx.demo.mandelbrot.webworker;
 
 import dev.webfx.demo.mandelbrot.math.MandelbrotMath;
-import dev.webfx.stack.platform.webassembly.WebAssembly;
-import dev.webfx.stack.platform.webassembly.WebAssemblyInstance;
-import dev.webfx.stack.platform.webassembly.WebAssemblyMemoryBufferReader;
-import dev.webfx.stack.platform.json.Json;
-import dev.webfx.stack.platform.json.JsonObject;
-import dev.webfx.stack.platform.webworker.spi.base.JavaCodedWebWorkerBase;
-import dev.webfx.stack.async.Future;
+import dev.webfx.platform.webassembly.WebAssembly;
+import dev.webfx.platform.webassembly.WebAssemblyInstance;
+import dev.webfx.platform.webassembly.WebAssemblyMemoryBufferReader;
+import dev.webfx.platform.json.Json;
+import dev.webfx.platform.json.JsonObject;
+import dev.webfx.platform.webworker.spi.base.JavaCodedWebWorkerBase;
+import dev.webfx.platform.async.Future;
 
 /**
  * @author Bruno Salmon

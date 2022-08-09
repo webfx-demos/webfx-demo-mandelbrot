@@ -15,14 +15,14 @@ public class ServiceLoader<S> implements Iterable<S> {
             case "dev.webfx.platform.boot.spi.ApplicationJob": return new ServiceLoader<S>();
             case "dev.webfx.platform.boot.spi.ApplicationModuleBooter": return new ServiceLoader<S>(dev.webfx.kit.launcher.WebFxKitLauncherModuleBooter::new, dev.webfx.platform.boot.spi.impl.ApplicationJobsBooter::new, dev.webfx.platform.resource.spi.impl.gwt.GwtResourceModuleBooter::new);
             case "dev.webfx.platform.console.spi.ConsoleProvider": return new ServiceLoader<S>(dev.webfx.platform.console.spi.impl.gwt.GwtConsoleProvider::new);
+            case "dev.webfx.platform.json.spi.JsonProvider": return new ServiceLoader<S>(dev.webfx.platform.json.spi.impl.gwt.GwtJsonObject::new);
             case "dev.webfx.platform.resource.spi.ResourceProvider": return new ServiceLoader<S>(dev.webfx.platform.resource.spi.impl.gwt.GwtResourceProvider::new);
             case "dev.webfx.platform.resource.spi.impl.gwt.GwtResourceBundle": return new ServiceLoader<S>();
             case "dev.webfx.platform.scheduler.spi.SchedulerProvider": return new ServiceLoader<S>(dev.webfx.platform.uischeduler.spi.impl.gwt.GwtUiSchedulerProvider::new);
             case "dev.webfx.platform.shutdown.spi.ShutdownProvider": return new ServiceLoader<S>(dev.webfx.platform.shutdown.spi.impl.gwt.GwtShutdownProvider::new);
             case "dev.webfx.platform.uischeduler.spi.UiSchedulerProvider": return new ServiceLoader<S>(dev.webfx.platform.uischeduler.spi.impl.gwt.GwtUiSchedulerProvider::new);
-            case "dev.webfx.stack.platform.json.spi.JsonProvider": return new ServiceLoader<S>(dev.webfx.stack.platform.json.spi.impl.gwt.GwtJsonObject::create);
-            case "dev.webfx.stack.platform.webassembly.spi.WebAssemblyProvider": return new ServiceLoader<S>();
-            case "dev.webfx.stack.platform.webworker.spi.WorkerServiceProvider": return new ServiceLoader<S>(dev.webfx.stack.platform.webworker.spi.impl.gwt.GwtWorkerServiceProvider::new);
+            case "dev.webfx.platform.webassembly.spi.WebAssemblyProvider": return new ServiceLoader<S>();
+            case "dev.webfx.platform.webworker.spi.WorkerServiceProvider": return new ServiceLoader<S>(dev.webfx.platform.webworker.spi.impl.gwt.GwtWorkerServiceProvider::new);
             case "javafx.application.Application": return new ServiceLoader<S>(dev.webfx.demo.mandelbrot.MandelbrotApplication::new);
 
             // UNKNOWN SPI

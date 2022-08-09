@@ -9,11 +9,11 @@ import dev.webfx.lib.tracerframework.PixelComputer;
 import dev.webfx.lib.tracerframework.TracerThumbnail;
 import dev.webfx.lib.tracerframework.TracerEngine;
 import dev.webfx.demo.mandelbrot.webworker.MandelbrotWebWorker;
-import dev.webfx.stack.platform.json.Json;
-import dev.webfx.stack.platform.json.JsonObject;
-import dev.webfx.stack.platform.json.WritableJsonArray;
-import dev.webfx.stack.platform.json.WritableJsonObject;
-import dev.webfx.stack.platform.webworker.spi.base.JavaCodedWebWorkerBase;
+import dev.webfx.platform.json.Json;
+import dev.webfx.platform.json.JsonObject;
+import dev.webfx.platform.json.WritableJsonArray;
+import dev.webfx.platform.json.WritableJsonObject;
+import dev.webfx.platform.webworker.spi.base.JavaCodedWebWorkerBase;
 
 /**
  * @author Bruno Salmon

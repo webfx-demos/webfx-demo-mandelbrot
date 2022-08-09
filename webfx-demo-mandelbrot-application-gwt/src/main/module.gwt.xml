@@ -103,8 +103,8 @@
     <!--===========================< webfx-lib-tracerframework >============================-->
     <source path="dev/webfx/lib/tracerframework"/>
     <!--==============================< webfx-platform-async >==============================-->
-    <source path="dev/webfx/stack/async"/>
-    <source path="dev/webfx/stack/async/impl"/>
+    <source path="dev/webfx/platform/async"/>
+    <source path="dev/webfx/platform/async/impl"/>
     <!--==============================< webfx-platform-boot >===============================-->
     <source path="dev/webfx/platform/boot"/>
     <source path="dev/webfx/platform/boot/spi"/>
@@ -121,14 +121,14 @@
     <source path="emul/java/util"/>
     <source path="emul/java/util/regex"/>
     <!--==============================< webfx-platform-json >===============================-->
-    <source path="dev/webfx/stack/platform/json"/>
-    <source path="dev/webfx/stack/platform/json/parser"/>
-    <source path="dev/webfx/stack/platform/json/parser/javacup"/>
-    <source path="dev/webfx/stack/platform/json/parser/jflex"/>
-    <source path="dev/webfx/stack/platform/json/spi"/>
-    <source path="dev/webfx/stack/platform/json/spi/impl/listmap"/>
+    <source path="dev/webfx/platform/json"/>
+    <source path="dev/webfx/platform/json/parser"/>
+    <source path="dev/webfx/platform/json/parser/javacup"/>
+    <source path="dev/webfx/platform/json/parser/jflex"/>
+    <source path="dev/webfx/platform/json/spi"/>
+    <source path="dev/webfx/platform/json/spi/impl/listmap"/>
     <!--============================< webfx-platform-json-gwt >=============================-->
-    <source path="dev/webfx/stack/platform/json/spi/impl/gwt"/>
+    <source path="dev/webfx/platform/json/spi/impl/gwt"/>
     <!--============================< webfx-platform-resource >=============================-->
     <source path="dev/webfx/platform/resource"/>
     <source path="dev/webfx/platform/resource/spi"/>
@@ -158,15 +158,15 @@
     <source path="dev/webfx/platform/util/tuples"/>
     <source path="dev/webfx/platform/util/uuid"/>
     <!--===========================< webfx-platform-webassembly >===========================-->
-    <source path="dev/webfx/stack/platform/webassembly"/>
-    <source path="dev/webfx/stack/platform/webassembly/spi"/>
+    <source path="dev/webfx/platform/webassembly"/>
+    <source path="dev/webfx/platform/webassembly/spi"/>
     <!--============================< webfx-platform-webworker >============================-->
-    <source path="dev/webfx/stack/platform/webworker"/>
-    <source path="dev/webfx/stack/platform/webworker/pool"/>
-    <source path="dev/webfx/stack/platform/webworker/spi"/>
-    <source path="dev/webfx/stack/platform/webworker/spi/base"/>
+    <source path="dev/webfx/platform/webworker"/>
+    <source path="dev/webfx/platform/webworker/pool"/>
+    <source path="dev/webfx/platform/webworker/spi"/>
+    <source path="dev/webfx/platform/webworker/spi/base"/>
     <!--==========================< webfx-platform-webworker-gwt >==========================-->
-    <source path="dev/webfx/stack/platform/webworker/spi/impl/gwt"/>
+    <source path="dev/webfx/platform/webworker/spi/impl/gwt"/>
     <set-property name="user.agent" value="safari"/> <!-- to make only 1 permutation for testing with Chrome -->
     <set-property name="jre.checks.checkLevel" value="MINIMAL"/>
 

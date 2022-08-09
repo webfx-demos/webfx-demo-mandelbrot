@@ -15,7 +15,7 @@ public class ServiceLoader<S> implements Iterable<S> {
             case "dev.webfx.platform.boot.spi.ApplicationJob": return new ServiceLoader<S>();
             case "dev.webfx.platform.boot.spi.ApplicationModuleBooter": return new ServiceLoader<S>(dev.webfx.kit.launcher.WebFxKitLauncherModuleBooter::new, dev.webfx.platform.boot.spi.impl.ApplicationJobsBooter::new, dev.webfx.platform.resource.spi.impl.gwt.GwtResourceModuleBooter::new);
             case "dev.webfx.platform.console.spi.ConsoleProvider": return new ServiceLoader<S>(dev.webfx.platform.console.spi.impl.gwt.GwtConsoleProvider::new);
-            case "dev.webfx.platform.json.spi.JsonProvider": return new ServiceLoader<S>(dev.webfx.platform.json.spi.impl.gwt.GwtJsonObject::new);
+            case "dev.webfx.platform.json.spi.JsonProvider": return new ServiceLoader<S>(dev.webfx.platform.json.spi.impl.gwt.GwtJsonObject::create);
             case "dev.webfx.platform.resource.spi.ResourceProvider": return new ServiceLoader<S>(dev.webfx.platform.resource.spi.impl.gwt.GwtResourceProvider::new);
             case "dev.webfx.platform.resource.spi.impl.gwt.GwtResourceBundle": return new ServiceLoader<S>();
             case "dev.webfx.platform.scheduler.spi.SchedulerProvider": return new ServiceLoader<S>(dev.webfx.platform.uischeduler.spi.impl.gwt.GwtUiSchedulerProvider::new);

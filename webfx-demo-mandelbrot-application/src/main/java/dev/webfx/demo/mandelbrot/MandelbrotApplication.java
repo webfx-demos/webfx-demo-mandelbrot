@@ -34,9 +34,13 @@ public final class MandelbrotApplication extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        // Deciding the canvas size
         Rectangle2D screenBounds = Screen.getPrimary().getBounds();
-        double w = screenBounds.getWidth(), h = screenBounds.getHeight(), r = w / h, wh = w * h;
+        double w = screenBounds.getWidth(), h = screenBounds.getHeight();
+        if (w < h) {
+            w = h;
+            h = screenBounds.getWidth();
+        }
+        double r = w / h, wh = w * h;
         if (wh > MAX_PIXELS_COUNT) {
             w = Math.sqrt(MAX_PIXELS_COUNT * r);
             h = w / r;

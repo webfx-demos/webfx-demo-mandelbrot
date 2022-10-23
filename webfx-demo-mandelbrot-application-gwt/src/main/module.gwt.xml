@@ -57,6 +57,8 @@
     <source path="javafx/scene/text"/>
     <source path="javafx/scene/transform"/>
     <source path="javafx/stage"/>
+    <!--================================< elemental2-core >=================================-->
+    <inherits name="elemental2.core.Core"/>
     <!--=================================< elemental2-dom >=================================-->
     <inherits name="elemental2.dom.Dom"/>
     <!--=================================< elemental2-svg >=================================-->

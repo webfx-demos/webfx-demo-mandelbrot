@@ -1,5 +1,6 @@
 package dev.webfx.demo.mandelbrot;
 
+import dev.webfx.platform.json.JsonArray;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.LinearGradient;
 import dev.webfx.demo.mandelbrot.math.MandelbrotMath;
@@ -10,9 +11,8 @@ import dev.webfx.lib.tracerframework.TracerThumbnail;
 import dev.webfx.lib.tracerframework.TracerEngine;
 import dev.webfx.demo.mandelbrot.webworker.MandelbrotWebWorker;
 import dev.webfx.platform.json.Json;
+import dev.webfx.platform.json.ReadOnlyJsonObject;
 import dev.webfx.platform.json.JsonObject;
-import dev.webfx.platform.json.WritableJsonArray;
-import dev.webfx.platform.json.WritableJsonObject;
 import dev.webfx.platform.webworker.spi.base.JavaCodedWebWorkerBase;
 
 /**
@@ -128,8 +128,8 @@ final class MandelbrotPixelComputer implements PixelComputer {
     }
 
     @Override
-    public JsonObject getLineWorkerParameters(int y, boolean firstWorkerCall) {
-        WritableJsonObject json = Json.createObject().set("cy", y);
+    public ReadOnlyJsonObject getLineWorkerParameters(int y, boolean firstWorkerCall) {
+        JsonObject json = Json.createObject().set("cy", y);
         if (firstWorkerCall) {
             json.set("width", canvasWidth);
             json.set("height", canvasHeight);
@@ -147,7 +147,7 @@ final class MandelbrotPixelComputer implements PixelComputer {
             values = (int[]) workerResult;
             for (int value : values) currentFrameIterations += value;
         } else {
-            WritableJsonArray array = Json.createArray(workerResult);
+            JsonArray array = Json.createArray(workerResult);
             int n = array.size();
             values = new int[n];
             for (int i = 0; i < n; i++) {

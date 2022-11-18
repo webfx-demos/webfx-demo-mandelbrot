@@ -21,7 +21,6 @@ public class ServiceLoader<S> implements Iterable<S> {
             case "dev.webfx.platform.scheduler.spi.SchedulerProvider": return new ServiceLoader<S>(dev.webfx.platform.uischeduler.spi.impl.gwt.GwtUiSchedulerProvider::new);
             case "dev.webfx.platform.shutdown.spi.ShutdownProvider": return new ServiceLoader<S>(dev.webfx.platform.shutdown.spi.impl.gwt.GwtShutdownProvider::new);
             case "dev.webfx.platform.uischeduler.spi.UiSchedulerProvider": return new ServiceLoader<S>(dev.webfx.platform.uischeduler.spi.impl.gwt.GwtUiSchedulerProvider::new);
-            case "dev.webfx.platform.webassembly.spi.WebAssemblyProvider": return new ServiceLoader<S>();
             case "dev.webfx.platform.webworker.spi.WorkerServiceProvider": return new ServiceLoader<S>(dev.webfx.platform.webworker.spi.impl.gwt.GwtWorkerServiceProvider::new);
             case "javafx.application.Application": return new ServiceLoader<S>(dev.webfx.demo.mandelbrot.MandelbrotApplication::new);
 

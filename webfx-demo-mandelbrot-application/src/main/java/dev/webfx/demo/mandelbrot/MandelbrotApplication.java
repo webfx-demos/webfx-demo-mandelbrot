@@ -34,10 +34,11 @@ public final class MandelbrotApplication extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        Rectangle2D screenBounds = Screen.getPrimary().getBounds();
-        double w = screenBounds.getWidth(), h = screenBounds.getHeight();
+        // Deciding the canvas size
+        Rectangle2D screenVisualBounds = Screen.getPrimary().getVisualBounds();
+        double w = screenVisualBounds.getWidth(), h = screenVisualBounds.getHeight(); // Trying fullscreen
         double r = w / h, wh = w * h;
-        if (wh > MAX_PIXELS_COUNT) {
+        if (wh > 1.5 * MAX_PIXELS_COUNT) { // Ok to accept fullscreen if not exceeding 50%, otherwise applying limits
             w = Math.sqrt(MAX_PIXELS_COUNT * r);
             h = w / r;
         }

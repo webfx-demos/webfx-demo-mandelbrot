@@ -104,6 +104,8 @@
     <source path="eu/hansolo/fx/odometer/event"/>
     <!--===========================< webfx-lib-tracerframework >============================-->
     <source path="dev/webfx/lib/tracerframework"/>
+    <resource path="dev/webfx/lib/tracerframework"/>
+    <public includes="dev/webfx/lib/tracerframework/" path=""/>
     <!--==============================< webfx-platform-async >==============================-->
     <source path="dev/webfx/platform/async"/>
     <source path="dev/webfx/platform/async/impl"/>

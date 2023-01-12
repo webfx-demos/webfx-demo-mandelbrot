@@ -84,6 +84,8 @@
                     </attachList>
                     <resourcesList>
                         <list>dev/webfx/platform/meta/exe/[^/]+</list>
+                        <list>dev/webfx/lib/tracerframework/[^/]+</list>
+                        <list>images/checkbox/[^/]+</list>
                     </resourcesList>
                 </configuration>
             </plugin>

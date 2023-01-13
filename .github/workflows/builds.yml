@@ -327,15 +327,23 @@ jobs:
       #  6) App-Android-aarch64-native-package.apk : Android native app (Gluon)                                        #
       ##################################################################################################################
 
-      # All prerequisite have already be done when building the Desktop qpps
+      # All prerequisite have already been done when building the Desktop apps
 
       # Invoking the Gluon Client Maven plugin to build the native Android app (chaining build & package goals)
       - if: matrix.gluon-android-arch-token != null
+        id: android_gluon_build
         name: Gluon Build for Android
         run: mvn -B -P 'gluon-android' clean gluonfx:build gluonfx:package # May take a while
         env:
           GRAALVM_HOME: ${{ env.JAVA_HOME }}
         working-directory: ${{ env.app-gluon-module-dir }}
+        continue-on-error: true # So that we print the Gluon logs in the next step to help investigating the error
+
+      - if: steps.android_gluon_build.outcome == 'failure'
+        name: Print Gluon logs (when build failed)
+        run:  |
+          tail -n+1 ${{ env.app-gluon-module-dir }}/target/gluonfx/log/*.log
+          exit 1
 
       # Staging 6)
       - if: matrix.gluon-android-arch-token != null
@@ -419,7 +427,7 @@ jobs:
       ##################################################################################################################
 
       # Uploading all artifacts in the assets of this workflow run
-      - name: Upload artifacts in the assets of this worflow run
+      - name: Upload artifacts in the assets of this workflow run
         uses: actions/upload-artifact@v2
         with:
           name: build-${{ matrix.os-config }}-assets

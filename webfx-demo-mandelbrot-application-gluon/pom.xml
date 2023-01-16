@@ -49,7 +49,7 @@
 
         <dependency>
             <groupId>dev.webfx</groupId>
-            <artifactId>webfx-platform-resource-java</artifactId>
+            <artifactId>webfx-platform-resource-gluon</artifactId>
             <version>0.1.0-SNAPSHOT</version>
         </dependency>
 
@@ -81,12 +81,17 @@
                 <configuration>
                     <attachList>
                         <list>lifecycle</list>
+                        <list>storage</list>
                     </attachList>
                     <resourcesList>
-                        <list>dev/webfx/platform/meta/exe/[^/]+</list>
                         <list>dev/webfx/lib/tracerframework/[^/]+</list>
+                        <list>dev/webfx/platform/meta/exe/[^/]+</list>
                         <list>images/checkbox/[^/]+</list>
                     </resourcesList>
+                    <releaseConfiguration>
+                        <!-- Android -->
+                        <appLabel>Mandelbrot</appLabel>
+                    </releaseConfiguration>
                 </configuration>
             </plugin>
         </plugins>

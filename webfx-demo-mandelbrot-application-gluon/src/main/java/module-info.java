@@ -11,6 +11,7 @@ module webfx.demo.mandelbrot.application.gluon {
     requires webfx.platform.resource.gluon;
     requires webfx.platform.scheduler.java;
     requires webfx.platform.shutdown.gluon;
+    requires webfx.platform.useragent.gluon;
     requires webfx.platform.webworker.java;
 
     // Meta Resource package

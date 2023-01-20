@@ -100,10 +100,12 @@
                         <list>dev/webfx/platform/meta/exe/[^/]+$</list>
                         <list>images/checkbox/[^/]+$</list>
                     </resourcesList>
+                    <appIdentifier>dev.webfx.demo.mandelbrot</appIdentifier>
                     <releaseConfiguration>
                         <!-- Android -->
                         <appLabel>Mandelbrot</appLabel>
                     </releaseConfiguration>
+
                 </configuration>
             </plugin>
         </plugins>

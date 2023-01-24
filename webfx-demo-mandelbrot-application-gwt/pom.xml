@@ -124,6 +124,13 @@
 
         <dependency>
             <groupId>dev.webfx</groupId>
+            <artifactId>webfx-kit-util-scene</artifactId>
+            <version>0.1.0-SNAPSHOT</version>
+            <classifier>sources</classifier>
+        </dependency>
+
+        <dependency>
+            <groupId>dev.webfx</groupId>
             <artifactId>webfx-lib-javacupruntime</artifactId>
             <version>0.1.0-SNAPSHOT</version>
             <classifier>sources</classifier>

@@ -7,6 +7,7 @@ module webfx.demo.mandelbrot.application {
     requires javafx.graphics;
     requires webfx.demo.mandelbrot.math;
     requires webfx.demo.mandelbrot.webworker;
+    requires webfx.kit.util.scene;
     requires webfx.lib.tracerframework;
     requires webfx.platform.json;
     requires webfx.platform.webworker;

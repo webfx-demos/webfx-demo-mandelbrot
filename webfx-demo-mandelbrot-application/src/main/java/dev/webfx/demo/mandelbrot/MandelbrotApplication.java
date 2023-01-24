@@ -18,33 +18,29 @@
 package dev.webfx.demo.mandelbrot;
 
 
+import dev.webfx.kit.util.scene.DeviceSceneUtil;
+import dev.webfx.lib.tracerframework.TracerView;
 import javafx.application.Application;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;
-import javafx.stage.Screen;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-import dev.webfx.lib.tracerframework.TracerView;
 
 /**
  * @author Bruno Salmon
  */
 public final class MandelbrotApplication extends Application {
 
-    private final static double MAX_PIXELS_COUNT = 640 * 480; // Limiting the frame weight as we will take a snapshot for each
+    private final static double MAX_PIXELS = 640 * 480; // Limiting the frame weight as we will take a snapshot for each
 
     @Override
     public void start(Stage primaryStage) {
         // Deciding the canvas size
-        Rectangle2D screenVisualBounds = Screen.getPrimary().getVisualBounds();
-        double w = screenVisualBounds.getWidth(), h = screenVisualBounds.getHeight(); // Trying fullscreen
-        double r = w / h, wh = w * h;
-        if (wh > 1.5 * MAX_PIXELS_COUNT) { // Ok to accept fullscreen if not exceeding 50%, otherwise applying limits
-            w = Math.sqrt(MAX_PIXELS_COUNT * r);
-            h = w / r;
-        }
+        Rectangle2D sceneBounds = DeviceSceneUtil.getSceneBoundsWithMaxPixelsCapOnDesktop(MAX_PIXELS);
+        double w = sceneBounds.getWidth(), h = sceneBounds.getHeight();
 
         // Creating the scene with the specified size (this size is ignored if running in the browser)
-        primaryStage.setScene(new Scene(new TracerView((int) w, (int) h, new MandelbrotPixelComputer()).buildView(), w, h));
+        primaryStage.setScene(new Scene(new TracerView((int) w, (int) h, new MandelbrotPixelComputer()).buildView(), w, h, Color.BLACK));
         primaryStage.setTitle("WebFX Mandelbrot");
         primaryStage.show();
     }

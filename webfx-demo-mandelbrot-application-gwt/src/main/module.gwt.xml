@@ -97,6 +97,8 @@
     <!--=================================< webfx-kit-util >=================================-->
     <source path="dev/webfx/kit/util/properties"/>
     <source path="dev/webfx/kit/util/properties/conversion"/>
+    <!--==============================< webfx-kit-util-scene >==============================-->
+    <source path="dev/webfx/kit/util/scene"/>
     <!--============================< webfx-lib-javacupruntime >============================-->
     <source path="java_cup/runtime"/>
     <!--===============================< webfx-lib-odometer >===============================-->

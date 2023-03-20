@@ -104,6 +104,8 @@
     <!--===============================< webfx-lib-odometer >===============================-->
     <source path="eu/hansolo/fx/odometer"/>
     <source path="eu/hansolo/fx/odometer/event"/>
+    <resource path="eu/hansolo/fx/odometer"/>
+    <public includes="eu/hansolo/fx/odometer/" path=""/>
     <!--===========================< webfx-lib-tracerframework >============================-->
     <source path="dev/webfx/lib/tracerframework"/>
     <resource path="dev/webfx/lib/tracerframework"/>

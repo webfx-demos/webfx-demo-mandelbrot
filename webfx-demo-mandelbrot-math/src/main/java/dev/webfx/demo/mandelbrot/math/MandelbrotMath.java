@@ -30,7 +30,7 @@ public final class MandelbrotMath {
     public static void init(int width, int height, int placeIndex, int frameIndex) {
         mandelbrotPointThreadLocal.remove();
         MandelbrotModel model = mandelbrotModelThreadLocal.get();
-        if (model == null || model.placeIndex != placeIndex || frameIndex < model.frameIndex) {
+        if (model == null || model.placeIndex != placeIndex || frameIndex < model.frameIndex || width != model.width || height != model.height) {
             model = MandelbrotModel.ofViewport(MandelbrotPlaces.PLACES[placeIndex]);
             model.placeIndex = placeIndex;
             model.adjustAspect(width, height);

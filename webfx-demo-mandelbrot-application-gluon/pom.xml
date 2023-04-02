@@ -105,6 +105,7 @@
                     <resourcesList>
                         <list>dev/webfx/lib/tracerframework/[^/]+$</list>
                         <list>dev/webfx/platform/meta/exe/[^/]+$</list>
+                        <list>eu/hansolo/fx/odometer/[^/]+$</list>
                         <list>images/checkbox/[^/]+$</list>
                     </resourcesList>
                     <appIdentifier>dev.webfx.demo.mandelbrot</appIdentifier>

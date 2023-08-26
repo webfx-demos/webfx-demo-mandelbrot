@@ -16,7 +16,7 @@ module webfx.demo.mandelbrot.application.openjfx {
     requires webfx.platform.useragent.java.client;
     requires webfx.platform.webworker.java;
 
-    // Meta Resource package
+    // Resources packages
     opens dev.webfx.platform.meta.exe;
 
 }

@@ -16,7 +16,4 @@ module webfx.demo.mandelbrot.application.gluon {
     requires webfx.platform.useragent.gluon;
     requires webfx.platform.webworker.java;
 
-    // Resources packages
-    opens dev.webfx.platform.meta.exe;
-
 }

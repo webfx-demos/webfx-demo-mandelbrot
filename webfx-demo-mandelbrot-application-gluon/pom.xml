@@ -104,6 +104,7 @@
                     </attachList>
                     <resourcesList>
                         <list>dev/webfx/lib/tracerframework/[^/]+$</list>
+                        <list>dev/webfx/platform/conf/[^/]+$</list>
                         <list>dev/webfx/platform/meta/exe/[^/]+$</list>
                         <list>eu/hansolo/fx/odometer/[^/]+$</list>
                         <list>javafx/scene/control/skin/checkbox/[^/]+$</list>

@@ -44,6 +44,7 @@
     <source path="dev/webfx/kit/mapper/spi/impl/base"/>
     <source path="javafx/animation"/>
     <source path="javafx/application"/>
+    <source path="javafx/concurrent"/>
     <source path="javafx/css"/>
     <source path="javafx/geometry"/>
     <source path="javafx/scene"/>
@@ -136,6 +137,7 @@
     <super-source includes="java/util/" path=""/>
     <super-source includes="java/util/function/" path=""/>
     <super-source includes="java/util/regex/" path=""/>
+    <super-source includes="netscape/javascript/" path=""/>
     <!--==============================< webfx-platform-json >===============================-->
     <source path="dev/webfx/platform/json"/>
     <source path="dev/webfx/platform/json/parser"/>

@@ -26,6 +26,7 @@ name: Multi-OS builds
 on:
   push:
     branches: [ main ]
+  workflow_dispatch:
 
 jobs:
   build:
@@ -89,6 +90,8 @@ jobs:
       xcode-version: '14.2.0'
       API_GITHUB_TOKEN: ${{ secrets.API_GITHUB_TOKEN }}
       GLUON_LICENSE: ${{ secrets.GLUON_LICENSE }}
+      GLUON_ANDROID_VERSION_CODE: ${{ vars.GLUON_ANDROID_VERSION_CODE }}
+      GLUON_ANDROID_VERSION_NAME: ${{ vars.GLUON_ANDROID_VERSION_NAME }}
       GLUON_ANDROID_KEYSTORE_BASE64: ${{ secrets.GLUON_ANDROID_KEYSTORE_BASE64 }}
       GLUON_ANDROID_KEYSTORE_PASSWORD: ${{ secrets.GLUON_ANDROID_KEYSTORE_PASSWORD }}
       GLUON_ANDROID_KEYALIAS: ${{ secrets.GLUON_ANDROID_KEYALIAS }}
@@ -293,7 +296,10 @@ jobs:
       # Gluon needs additional libraries on Linux
       - if: runner.os == 'Linux'
         name: Install libraries required for Gluon on Linux
-        run: sudo apt update; sudo apt install libasound2-dev libavcodec-dev libavformat-dev libavutil-dev libgl-dev libgtk-3-dev libpango1.0-dev libxtst-dev
+        run:  |
+          sudo apt update
+          sudo apt install libasound2-dev libavcodec-dev libavformat-dev libavutil-dev libgl-dev libgtk-3-dev libpango1.0-dev libxtst-dev
+      
 
       # Passing the Gluon License (if set)
       - if: env.GLUON_LICENSE != ''
@@ -461,7 +467,7 @@ jobs:
 
       # Uploading all artifacts in the assets of this workflow run
       - name: Upload artifacts in the assets of this workflow run
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: build-${{ matrix.os-config }}-assets
           path: staging/*

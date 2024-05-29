@@ -4,8 +4,9 @@ module webfx.demo.mandelbrot.webworker {
 
     // Direct dependencies modules
     requires webfx.demo.mandelbrot.math;
+    requires webfx.platform.ast;
     requires webfx.platform.async;
-    requires webfx.platform.json;
+    requires webfx.platform.console;
     requires webfx.platform.webassembly;
     requires webfx.platform.webworker;
 

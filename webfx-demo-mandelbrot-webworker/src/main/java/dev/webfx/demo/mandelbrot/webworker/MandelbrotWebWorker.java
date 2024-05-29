@@ -4,8 +4,8 @@ import dev.webfx.demo.mandelbrot.math.MandelbrotMath;
 import dev.webfx.platform.webassembly.WebAssembly;
 import dev.webfx.platform.webassembly.WebAssemblyInstance;
 import dev.webfx.platform.webassembly.WebAssemblyMemoryBufferReader;
-import dev.webfx.platform.json.Json;
-import dev.webfx.platform.json.ReadOnlyJsonObject;
+import dev.webfx.platform.ast.AST;
+import dev.webfx.platform.ast.ReadOnlyAstObject;
 import dev.webfx.platform.webworker.spi.base.JavaCodedWebWorkerBase;
 import dev.webfx.platform.async.Future;
 
@@ -32,7 +32,9 @@ public class MandelbrotWebWorker extends JavaCodedWebWorkerBase {
             });
         }
         setOnMessageHandler(data -> {
-            ReadOnlyJsonObject json = Json.createObject(data);
+            dev.webfx.platform.console.Console.log("Received data: ");
+            dev.webfx.platform.console.Console.logNative(data);
+            ReadOnlyAstObject json = AST.createObject(data);
             int cy = json.getInteger("cy", 0); // TODO: fix bug returning null for 0 value in TeaVM implementation
             Integer iWidth = json.getInteger("width"); // TODO: fix json.has() not compiling with TeaVM
             boolean initFrame = iWidth != null;

@@ -41,6 +41,7 @@
         <module>webfx-demo-mandelbrot-application-openjfx</module>
         <module>webfx-demo-mandelbrot-application-gluon</module>
         <module>webfx-demo-mandelbrot-application-gwt</module>
+        <module>webfx-demo-mandelbrot-application-j2cl</module>
     </modules>
 
 </project>

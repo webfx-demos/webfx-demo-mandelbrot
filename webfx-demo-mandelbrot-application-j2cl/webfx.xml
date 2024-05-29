@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project executable="true">
+
+    <dependencies>
+        <used-by-source-modules/>
+    </dependencies>
+
+    <maven-pom-manual>
+        <build>
+            <plugins>
+
+                <plugin>
+                    <artifactId>maven-antrun-plugin</artifactId>
+                    <version>3.0.0</version>
+                    <executions>
+                        <execution>
+                            <id>append-main</id>
+                            <goals>
+                                <goal>run</goal>
+                            </goals>
+                            <phase>compile</phase>
+                            <configuration>
+                                <target>
+                                    <!-- Copying the JavaScript file of the webWorker (compiled by TeaVM) -->
+                                    <copy file="${project.basedir}/../webfx-demo-mandelbrot-webworker-teavm/target/teavm/classes.js" tofile="${project.build.outputDirectory}/public/dev.webfx.demo.mandelbrot.webworker.MandelbrotWebWorker.js"/>
+                                    <!-- Copying the WebAssembly file of the computation (compiled by TeaVM) -->
+                                    <copy file="${project.basedir}/../webfx-demo-mandelbrot-webassembly-teavm/target/teavm/classes.wasm" tofile="${project.build.outputDirectory}/public/classes.wasm"/>
+                                </target>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+
+            </plugins>
+        </build>
+    </maven-pom-manual>
+
+</project>

@@ -3,15 +3,17 @@ package dev.webfx.demo.mandelbrot;
 import dev.webfx.demo.mandelbrot.math.MandelbrotMath;
 import dev.webfx.demo.mandelbrot.math.MandelbrotPlace;
 import dev.webfx.demo.mandelbrot.math.MandelbrotPlaces;
-import dev.webfx.demo.mandelbrot.webworker.MandelbrotWebWorker;
+import dev.webfx.demo.mandelbrot.workerthread.MandelbrotWorkerThreadWorker;
 import dev.webfx.lib.tracerframework.PixelComputer;
 import dev.webfx.lib.tracerframework.TracerEngine;
 import dev.webfx.lib.tracerframework.TracerThumbnail;
 import dev.webfx.platform.ast.AST;
-import dev.webfx.platform.ast.AstArray;
 import dev.webfx.platform.ast.AstObject;
 import dev.webfx.platform.ast.ReadOnlyAstObject;
-import dev.webfx.platform.webworker.spi.base.JavaCodedWebWorkerBase;
+import dev.webfx.platform.typedarray.ArrayBuffer;
+import dev.webfx.platform.typedarray.TypedArrayFactory;
+import dev.webfx.platform.typedarray.Uint16Array;
+import dev.webfx.platform.worker.workerthread.ApplicationWorkerThreadWorkerBase;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.LinearGradient;
 
@@ -22,7 +24,7 @@ final class MandelbrotPixelComputer implements PixelComputer {
 
     private int canvasWidth, canvasHeight;
     private int placeIndex = -1, frameIndex, thumbnailFrameIndex = -1;
-    private boolean usingWebAssembly = true;
+    private boolean usingWebAssembly = false;
     private long currentFrameIterations, lastFrameIterations;
 
     private int maxIterations;
@@ -98,8 +100,7 @@ final class MandelbrotPixelComputer implements PixelComputer {
 
     @Override
     public Color getPixelResultColor(int x, int y, Object linePixelResultStorage) {
-        int[] pixelIterations = (int[]) linePixelResultStorage;
-        int count = pixelIterations[x];
+        int count = getPixelCount(x, linePixelResultStorage);
 
         Color color;
         if (count == maxIterations)
@@ -110,52 +111,40 @@ final class MandelbrotPixelComputer implements PixelComputer {
         return color;
     }
 
-    @Override
-    public Object createLinePixelResultStorage() {
-        return MandelbrotMath.createLinePixelResultStorage(canvasWidth, null);
+    private int getPixelCount(int x, Object linePixelResultStorage) {
+        if (linePixelResultStorage instanceof Uint16Array uint16Array)
+            return uint16Array.get(x);
+        return 0;
     }
 
     @Override
-    public void computeAndStorePixelResult(int x, int y, Object linePixelResultStorage) {
-        int[] pixelIterations = (int[]) linePixelResultStorage;
-        int count = MandelbrotMath.computeAndStorePixelResult(x, y, pixelIterations);
-        currentFrameIterations += count;
+    public Class<? extends ApplicationWorkerThreadWorkerBase> getWorkerClass() {
+        return MandelbrotWorkerThreadWorker.class;
     }
 
     @Override
-    public Class<? extends JavaCodedWebWorkerBase> getWorkerClass() {
-        return MandelbrotWebWorker.class;
-    }
-
-    @Override
-    public ReadOnlyAstObject getLineWorkerParameters(int y, boolean firstWorkerCall) {
-        AstObject json = AST.createObject().set("cy", y);
+    public ReadOnlyAstObject getLineWorkerParameters(int y, int n, boolean firstWorkerCall) {
+        AstObject astObject = AST.createObject()
+            .set("cy", y)
+            .set("n", n);
         if (firstWorkerCall) {
-            json.set("width", canvasWidth);
-            json.set("height", canvasHeight);
-            json.set("wasm", usingWebAssembly);
-            json.set("placeIndex", placeIndex);
-            json.set("frameIndex", frameIndex);
+            astObject.set("width", canvasWidth)
+                .set("height", canvasHeight)
+                .set("wasm", usingWebAssembly)
+                .set("placeIndex", placeIndex)
+                .set("frameIndex", frameIndex);
         }
-        return json;
+        return astObject;
     }
 
     @Override
     public Object getLinePixelResultStorage(Object workerResult) {
-        int[] values;
-        if (workerResult instanceof int[]) {
-            values = (int[]) workerResult;
-            for (int value : values) currentFrameIterations += value;
-        } else {
-            AstArray array = AST.createArray(workerResult);
-            int n = array.size();
-            values = new int[n];
-            for (int i = 0; i < n; i++) {
-                int count = array.getInteger(i);
-                values[i] = count;
-                currentFrameIterations += count;
-            }
+        ArrayBuffer arrayBuffer = TypedArrayFactory.wrapNativeBuffer(workerResult);
+        Uint16Array uint16Array = TypedArrayFactory.createUint16Array(arrayBuffer);
+        int n = uint16Array.getLength();
+        for (int i = 0; i < n; i++) {
+            currentFrameIterations += uint16Array.get(i);
         }
-        return values;
+        return uint16Array;
     }
 }

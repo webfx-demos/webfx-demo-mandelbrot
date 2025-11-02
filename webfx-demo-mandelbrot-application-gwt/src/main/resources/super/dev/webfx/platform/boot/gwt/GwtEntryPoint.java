@@ -36,9 +36,10 @@ public final class GwtEntryPoint implements ApplicationBooterProvider, EntryPoin
         register(dev.webfx.platform.resource.spi.impl.web.WebResourceBundle.class, dev.webfx.platform.resource.gwt.GwtEmbedResourcesBundle.ProvidedGwtResourceBundle::new);
         register(dev.webfx.platform.scheduler.spi.SchedulerProvider.class, dev.webfx.platform.uischeduler.spi.impl.elemental2.Elemental2UiSchedulerProvider::new);
         register(dev.webfx.platform.shutdown.spi.ShutdownProvider.class, dev.webfx.platform.shutdown.spi.impl.elemental2.Elemental2ShutdownProvider::new);
+        register(dev.webfx.platform.typedarray.spi.TypedArrayFactoryProvider.class, dev.webfx.platform.typedarray.spi.impl.elemental2.Elemental2TypedArrayFactoryProvider::new);
         register(dev.webfx.platform.uischeduler.spi.UiSchedulerProvider.class, dev.webfx.platform.uischeduler.spi.impl.elemental2.Elemental2UiSchedulerProvider::new);
         register(dev.webfx.platform.useragent.spi.UserAgentProvider.class, dev.webfx.platform.useragent.spi.impl.elemental2.Elemental2UserAgentProvider::new);
-        register(dev.webfx.platform.webworker.spi.WorkerServiceProvider.class, dev.webfx.platform.webworker.spi.impl.gwtj2cl.GwtJ2clWorkerServiceProvider::new);
+        register(dev.webfx.platform.worker.mainthread.spi.WorkerServiceProvider.class, dev.webfx.platform.worker.mainthread.spi.impl.elemental2.Elemental2WorkerServiceProvider::new);
         register(javafx.application.Application.class, dev.webfx.demo.mandelbrot.MandelbrotApplication::new);
     }
 }

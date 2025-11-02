@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+
+    <exported-packages>
+        <source-packages/>
+    </exported-packages>
+
+    <dependencies>
+        <used-by-source-modules/>
+    </dependencies>
+
+    <graalvm-reflection-json>
+        <![CDATA[
+[
+  {
+    "name" : "dev.webfx.demo.mandelbrot.workerthread.MandelbrotWorker",
+    "methods" : [
+      { "name" : "<init>", "parameterTypes" : [] }
+    ]
+  }
+]
+        ]]>
+    </graalvm-reflection-json>
+
+</project>

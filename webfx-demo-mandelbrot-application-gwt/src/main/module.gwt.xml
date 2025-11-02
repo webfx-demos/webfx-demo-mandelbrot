@@ -82,8 +82,8 @@
     <!--===========================< webfx-demo-mandelbrot-math >===========================-->
     <source path="dev/webfx/demo/mandelbrot/math"/>
     <source path="dev/webfx/demo/mandelbrot/math/original"/>
-    <!--========================< webfx-demo-mandelbrot-webworker >=========================-->
-    <source path="dev/webfx/demo/mandelbrot/webworker"/>
+    <!--=======================< webfx-demo-mandelbrot-workerthread >=======================-->
+    <source path="dev/webfx/demo/mandelbrot/workerthread"/>
     <!--======================< webfx-kit-javafxgraphics-elemental2 >=======================-->
     <source path="dev/webfx/kit/launcher/spi/impl/elemental2"/>
     <source path="dev/webfx/kit/mapper/spi/impl/elemental2"/>
@@ -187,6 +187,11 @@
     <source path="dev/webfx/platform/shutdown/spi/impl"/>
     <!--=======================< webfx-platform-shutdown-elemental2 >=======================-->
     <source path="dev/webfx/platform/shutdown/spi/impl/elemental2"/>
+    <!--===========================< webfx-platform-typedarray >============================-->
+    <source path="dev/webfx/platform/typedarray"/>
+    <source path="dev/webfx/platform/typedarray/spi"/>
+    <!--======================< webfx-platform-typedarray-elemental2 >======================-->
+    <source path="dev/webfx/platform/typedarray/spi/impl/elemental2"/>
     <!--===========================< webfx-platform-uischeduler >===========================-->
     <source path="dev/webfx/platform/uischeduler"/>
     <source path="dev/webfx/platform/uischeduler/spi"/>
@@ -213,13 +218,15 @@
     <!--===========================< webfx-platform-webassembly >===========================-->
     <source path="dev/webfx/platform/webassembly"/>
     <source path="dev/webfx/platform/webassembly/spi"/>
-    <!--============================< webfx-platform-webworker >============================-->
-    <source path="dev/webfx/platform/webworker"/>
-    <source path="dev/webfx/platform/webworker/pool"/>
-    <source path="dev/webfx/platform/webworker/spi"/>
-    <source path="dev/webfx/platform/webworker/spi/base"/>
-    <!--=======================< webfx-platform-webworker-gwt-j2cl >========================-->
-    <source path="dev/webfx/platform/webworker/spi/impl/gwtj2cl"/>
+    <!--=============================< webfx-platform-worker >==============================-->
+    <source path="dev/webfx/platform/worker"/>
+    <!--========================< webfx-platform-worker-mainthread >========================-->
+    <source path="dev/webfx/platform/worker/mainthread"/>
+    <source path="dev/webfx/platform/worker/mainthread/spi"/>
+    <!--==================< webfx-platform-worker-mainthread-elemental2 >===================-->
+    <source path="dev/webfx/platform/worker/mainthread/spi/impl/elemental2"/>
+    <!--=======================< webfx-platform-worker-workerthread >=======================-->
+    <source path="dev/webfx/platform/worker/workerthread"/>
 
     <!-- Speeding up GWT compilation and execution times -->
     <set-property name="user.agent" value="safari"/> <!-- Only one permutation to speed up GWT compilation - now workings in all modern browsers -->

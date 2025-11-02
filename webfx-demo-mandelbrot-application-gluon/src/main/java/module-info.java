@@ -13,7 +13,8 @@ module webfx.demo.mandelbrot.application.gluon {
     requires webfx.platform.resource.gluon;
     requires webfx.platform.scheduler.jre;
     requires webfx.platform.shutdown.gluon;
+    requires webfx.platform.typedarray.jre;
     requires webfx.platform.useragent.gluon;
-    requires webfx.platform.webworker.jre;
+    requires webfx.platform.worker.mainthread.jre;
 
 }

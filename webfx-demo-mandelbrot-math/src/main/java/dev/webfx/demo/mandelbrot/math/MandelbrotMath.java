@@ -2,6 +2,8 @@ package dev.webfx.demo.mandelbrot.math;
 
 import java.math.BigDecimal;
 
+import dev.webfx.platform.typedarray.Uint16Array;
+
 /**
  * @author Bruno Salmon
  */
@@ -60,6 +62,21 @@ public final class MandelbrotMath {
         MandelbrotModel model = mandelbrotModelThreadLocal.get();
         int count = MandelbrotMath.computeMandelbrotPointIterations(mbp.x, mbp.y, model.maxIterations);
         pixelIterations[cx] = count;
+        return count;
+    }
+
+    public static void computeLinePixelIterations(int cy, Uint16Array pixelIterations) {
+        int cx = 0;
+        MandelbrotModel model = mandelbrotModelThreadLocal.get();
+        while (cx < model.width)
+            computeAndStorePixelResult(cx++, cy, pixelIterations);
+    }
+
+    public static int computeAndStorePixelResult(int cx, int cy, Uint16Array pixelIterations) {
+        MandelbrotPoint mbp = convertCanvasPixelToModelPoint(cx, cy);
+        MandelbrotModel model = mandelbrotModelThreadLocal.get();
+        int count = MandelbrotMath.computeMandelbrotPointIterations(mbp.x, mbp.y, model.maxIterations);
+        pixelIterations.set(cx, count);
         return count;
     }
 

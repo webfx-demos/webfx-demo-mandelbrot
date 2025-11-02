@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project executable="true">
+
+    <dependencies>
+        <used-by-source-modules/>
+    </dependencies>
+
+    <providers>
+        <provider interface="org.teavm.classlib.ResourceSupplier">dev.webfx.platform.resource.teavm.TeaVMEmbedResourcesBundle</provider>
+        <provider interface="dev.webfx.platform.resource.spi.impl.web.WebResourceBundle">dev.webfx.platform.resource.teavm.TeaVMEmbedResourcesBundle</provider>
+    </providers>
+
+    <maven-pom-manual>
+        <build>
+            <plugins>
+
+                <plugin>
+                    <artifactId>maven-antrun-plugin</artifactId>
+                    <version>3.0.0</version>
+                    <executions>
+                        <execution>
+                            <id>copy-worker</id>
+                            <phase>prepare-package</phase>
+                            <goals>
+                                <goal>run</goal>
+                            </goals>
+                            <configuration>
+                                <target>
+                                    <!-- Copying the JavaScript file of the webWorker (compiled by TeaVM) -->
+                                    <copy file="${project.basedir}/../webfx-demo-mandelbrot-workerthread-teavm/target/teavm/classes.js" tofile="${plugin.teavm.param.targetDirectory}/dev.webfx.demo.mandelbrot.workerthread.MandelbrotWorkerThreadWorker.js"/>
+                                    <!-- Copying the WebAssembly file of the computation (compiled by TeaVM) -->
+                                    <copy file="${project.basedir}/../webfx-demo-mandelbrot-workerthread-teavm-wasm/target/teavm/classes.wasm" tofile="${plugin.teavm.param.targetDirectory}/MandelbrotWorkerThreadWorker.wasm"/>
+                                </target>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+
+            </plugins>
+        </build>
+    </maven-pom-manual>
+
+</project>

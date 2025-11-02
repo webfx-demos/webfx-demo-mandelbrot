@@ -13,4 +13,14 @@
 
     <artifactId>webfx-demo-mandelbrot-math</artifactId>
 
+    <dependencies>
+
+        <dependency>
+            <groupId>dev.webfx</groupId>
+            <artifactId>webfx-platform-typedarray</artifactId>
+            <version>0.1.0-SNAPSHOT</version>
+        </dependency>
+
+    </dependencies>
+
 </project>

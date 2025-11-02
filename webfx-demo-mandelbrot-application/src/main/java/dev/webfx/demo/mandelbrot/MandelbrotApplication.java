@@ -20,6 +20,7 @@ package dev.webfx.demo.mandelbrot;
 
 import dev.webfx.kit.util.scene.DeviceSceneUtil;
 import dev.webfx.lib.tracerframework.TracerView;
+import dev.webfx.platform.console.Console;
 import javafx.application.Application;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;

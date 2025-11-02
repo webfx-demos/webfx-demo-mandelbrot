@@ -96,6 +96,12 @@
 
         <dependency>
             <groupId>dev.webfx</groupId>
+            <artifactId>webfx-platform-typedarray-elemental2</artifactId>
+            <version>0.1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>dev.webfx</groupId>
             <artifactId>webfx-platform-uischeduler-elemental2</artifactId>
             <version>0.1.0-SNAPSHOT</version>
         </dependency>
@@ -108,7 +114,7 @@
 
         <dependency>
             <groupId>dev.webfx</groupId>
-            <artifactId>webfx-platform-webworker-gwt-j2cl</artifactId>
+            <artifactId>webfx-platform-worker-mainthread-elemental2</artifactId>
             <version>0.1.0-SNAPSHOT</version>
         </dependency>
 
@@ -177,9 +183,9 @@
                         <configuration>
                             <target>
                                 <!-- Copying the JavaScript file of the webWorker (compiled by TeaVM) -->
-                                <copy file="${project.basedir}/../webfx-demo-mandelbrot-webworker-teavm/target/teavm/classes.js" tofile="${project.build.outputDirectory}/public/dev.webfx.demo.mandelbrot.webworker.MandelbrotWebWorker.js"/>
+                                <copy file="${project.basedir}/../webfx-demo-mandelbrot-workerthread-teavm/target/teavm/classes.js" tofile="${project.build.outputDirectory}/public/dev.webfx.demo.mandelbrot.workerthread.MandelbrotWorkerThreadWorker.js"/>
                                 <!-- Copying the WebAssembly file of the computation (compiled by TeaVM) -->
-                                <copy file="${project.basedir}/../webfx-demo-mandelbrot-webworker-teavm-wasm/target/teavm/classes.wasm" tofile="${project.build.outputDirectory}/public/classes.wasm"/>
+                                <copy file="${project.basedir}/../webfx-demo-mandelbrot-workerthread-teavm-wasm/target/teavm/classes.wasm" tofile="${project.build.outputDirectory}/public/MandelbrotWorkerThreadWorker.wasm"/>
                             </target>
                         </configuration>
                     </execution>

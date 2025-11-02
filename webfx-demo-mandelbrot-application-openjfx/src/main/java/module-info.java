@@ -13,7 +13,8 @@ module webfx.demo.mandelbrot.application.openjfx {
     requires webfx.platform.resource.jre;
     requires webfx.platform.scheduler.jre;
     requires webfx.platform.shutdown.jre;
+    requires webfx.platform.typedarray.jre;
     requires webfx.platform.useragent.jre.client;
-    requires webfx.platform.webworker.jre;
+    requires webfx.platform.worker.mainthread.jre;
 
 }

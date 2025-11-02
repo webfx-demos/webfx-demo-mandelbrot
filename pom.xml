@@ -34,14 +34,16 @@
 
     <modules>
         <module>webfx-demo-mandelbrot-math</module>
-        <module>webfx-demo-mandelbrot-webworker</module>
-        <module>webfx-demo-mandelbrot-webworker-teavm</module>
-        <module>webfx-demo-mandelbrot-webworker-teavm-wasm</module>
+        <module>webfx-demo-mandelbrot-workerthread</module>
+        <module>webfx-demo-mandelbrot-workerthread-teavm</module>
+        <module>webfx-demo-mandelbrot-workerthread-teavm-wasm</module>
         <module>webfx-demo-mandelbrot-application</module>
         <module>webfx-demo-mandelbrot-application-openjfx</module>
         <module>webfx-demo-mandelbrot-application-gluon</module>
         <module>webfx-demo-mandelbrot-application-gwt</module>
         <module>webfx-demo-mandelbrot-application-j2cl</module>
+        <module>webfx-demo-mandelbrot-application-teavm</module>
+        <module>webfx-demo-mandelbrot-application-teavm-wasm</module>
     </modules>
 
 </project>

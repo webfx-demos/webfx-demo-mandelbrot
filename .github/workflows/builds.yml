@@ -33,49 +33,19 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        app: [{name: 'Mandelbrot', module-token: 'webfx-demo-mandelbrot', gwt-token: 'webfx_demo_mandelbrot', gluon-token: 'WebFXDemoMandelbrot', web-push-branch: 'mandelbrot', android-package-name: 'dev.webfx.demo.mandelbrot', android-track: 'beta', ios-bundle-id: 'dev.webfx.demo.mandelbrot', version: '0.1.0-SNAPSHOT'}]
-        os-config:  [1, 2, 3, 4]
+        app: [{name: 'Mandelbrot', module-token: 'webfx-demo-mandelbrot', gwt-token: 'webfx_demo_mandelbrot', gluon-token: 'WebFXDemoMandelbrot', gwt-push-branch: 'mandelbrot', teavm-push-branch: 'mandelbrot-teavm', teavm-wasm-push-branch: 'mandelbrot-wasm', android-package-name: 'dev.webfx.demo.mandelbrot', android-track: 'beta', ios-bundle-id: 'dev.webfx.demo.mandelbrot', version: '0.1.0-SNAPSHOT'}]
+        os-config:  [1]
         include:
           - os-config: 1 # Generates builds 1) 2) 3) 4) & 5)
             os: ubuntu-latest
             # Note: 1) must run on Ubuntu because the GitHub push action (to update the web-build branch) works only on Ubuntu
             gwt-artifact-suffix:           'Web.war'                            # build 1)
+            #j2cl-artifact-suffix:          'Web.war'                            # build 1)
             fatjar-artifact-suffix:        'Linux-x64-runnable.jar'             # build 2)
-            jvm-deb-artifact-suffix:       'Linux-x64-jvm-package.deb'          # build 3)
-            jvm-rpm-artifact-suffix:       'Linux-x64-jvm-package.rpm'          # build 4)
-            gluon-desktop-arch-token:      'x86_64-linux'                       # build 5)
-            gluon-desktop-artifact-suffix: 'Linux-x64-native-runnable'          # build 5)
-            MVN:                           '/tmp/maven/apache-maven-3.8.8/bin/mvn'
-
-          - os-config: 2 # Generates build 6) - Could be in os-config 1 but moved it a separate config to speed up (parallel run)
-            os: ubuntu-latest
-            gluon-android-arch-token:      'aarch64-android'                    # build 6)
-            gluon-android-apk-suffix:      'Android-aarch64.apk'                # build 6)
-            gluon-android-aab-suffix:      'Android-aarch64.aab'                # build 6)
-            MVN:                           '/tmp/maven/apache-maven-3.8.8/bin/mvn'
-
-          - os-config: 3 # Generates builds 7) 8) 9) & 10)
-            os: windows-latest
-            fatjar-artifact-suffix:        'Windows-x64-runnable.jar'           # build 7)
-            jvm-exe-artifact-suffix:       'Windows-x64-jvm-installer.exe'      # build 8)
-            jvm-msi-artifact-suffix:       'Windows-x64-jvm-installer.msi'      # build 9)
-            gluon-desktop-arch-token:      'x86_64-windows'                     # build 10)
-            # Commented as getting error: Error running candle to generate wixobj
-            # gluon-desktop-artifact-suffix: 'Windows-x64-native-runnable.exe'    # build 10)
-            # msi-desktop-artifact-suffix:   'Windows-x64-jvm-installer.msi'      # build 9)
-            MVN:                           'mvn -D"javafx.platform"="win"'
-
-          - os-config: 4 # Generates builds 11) 12) 13) 14) & 15)
-            os: macos-latest
-            fatjar-artifact-suffix:        'MacOS-x64.jar'                      # build 11)
-            jvm-dmg-artifact-suffix:       'MacOS-x64-jvm.dmg'                  # build 12)
-            jvm-pkg-artifact-suffix:       'MacOS-x64-jvm.pkg'                  # build 13)
-            # Commented MacOS Desktop due to new error from Gluon plugin: No valid Identity (Certificate) found for macOS development.
-            # gluon-desktop-arch-token:      'x86_64-darwin'                      # build 14)
-            # gluon-desktop-Artifact-suffix: 'MacOS-x64-native-runnable'          # build 14)
-            # Note: the iOS build needs the Apple certificate in secrets (the steps will be skipped otherwise)
-            gluon-ios-arch-token:          'arm64-ios'                          # build 15)
-            gluon-ios-artifact-suffix:     'iOS-arm64-native.ipa'               # build 15)
+            #jvm-deb-artifact-suffix:       'Linux-x64-jvm-package.deb'          # build 3)
+            #jvm-rpm-artifact-suffix:       'Linux-x64-jvm-package.rpm'          # build 4)
+            #gluon-desktop-arch-token:      'x86_64-linux'                       # build 5)
+            #gluon-desktop-artifact-suffix: 'Linux-x64-native-runnable'          # build 5)
             MVN:                           '/tmp/maven/apache-maven-3.8.8/bin/mvn'
 
     env:
@@ -87,6 +57,10 @@ jobs:
       app-gwt-build-dir:         ./${{ matrix.app.module-token }}-application-gwt/target/${{ matrix.app.module-token }}-application-gwt-${{ matrix.app.version }}/${{ matrix.app.gwt-token }}_application_gwt
       app-j2cl-module-dir:       ./${{ matrix.app.module-token }}-application-j2cl
       app-j2cl-build-dir:        ./${{ matrix.app.module-token }}-application-j2cl/target/${{ matrix.app.module-token }}-application-j2cl-${{ matrix.app.version }}/${{ matrix.app.module-token }}-application-j2cl
+      app-teavm-module-dir:      ./${{ matrix.app.module-token }}-application-teavm
+      app-teavm-build-dir:       ./${{ matrix.app.module-token }}-application-teavm/target/${{ matrix.app.module-token }}-application-teavm-${{ matrix.app.version }}
+      app-teavm-wasm-module-dir: ./${{ matrix.app.module-token }}-application-teavm-wasm
+      app-teavm-wasm-build-dir:  ./${{ matrix.app.module-token }}-application-teavm-wasm/target/${{ matrix.app.module-token }}-application-teavm-wasm-${{ matrix.app.version }}
       app-gluon-module-dir:      ./${{ matrix.app.module-token }}-application-gluon
       web-push-repository-name:  'webfx-netlify'
       web-push-repository-owner: 'webfx-project'
@@ -134,12 +108,12 @@ jobs:
           mkdir /tmp/download
           mkdir /tmp/maven/
           cd /tmp/download
-          curl -O https://dlcdn.apache.org/maven/maven-3/3.8.8/binaries/apache-maven-3.8.8-bin.tar.gz
+          curl -O https://archive.apache.org/dist/maven/maven-3/3.8.8/binaries/apache-maven-3.8.8-bin.tar.gz
           tar -xzf apache-maven-3.8.8-bin.tar.gz -C /tmp/maven/
           ${{ matrix.MVN }} -version
 
-      # Checkout this repository
-      - name: Checkout this repository
+      # Check out this repository
+      - name: Check out this repository
         uses: actions/checkout@v4
         with:
           path: ${{ env.app-repo-dir }}
@@ -175,19 +149,25 @@ jobs:
       # Building GWT application (if required)
       - if: matrix.gwt-artifact-suffix != null || matrix.app.gwt-push-branch != null && matrix.os-config == 1
         name: Build GWT application
-        run: ${{ matrix.MVN }} -B -P gwt-compile package
+        run: ${{ matrix.MVN }} -B -Pgwt-compile,production package
         working-directory: ${{ env.app-parent-module-dir }}
 
       # Building J2CL application (if required)
       - if: matrix.j2cl-artifact-suffix != null || matrix.app.j2cl-push-branch != null && matrix.os-config == 1
         name: Build J2CL application
-        run: ${{ matrix.MVN }} -B -P j2cl package
+        run: ${{ matrix.MVN }} -B -Pj2cl,production package
+        working-directory: ${{ env.app-parent-module-dir }}
+
+      # Building TeaVM application (if required)
+      - if: matrix.teavm-artifact-suffix != null || matrix.app.teavm-push-branch != null && matrix.os-config == 1  || matrix.app.teavm-wasm-push-branch != null && matrix.os-config == 1
+        name: Build TeaVM application
+        run: ${{ matrix.MVN }} -B -Pteavm,production package
         working-directory: ${{ env.app-parent-module-dir }}
 
       # Building OpenJFX fat jar and installers (if required)
       - if: matrix.fatjar-artifact-suffix != null
-        name: Build OpenJFX fat jar and installers
-        run: ${{ matrix.MVN }} -B -P 'openjfx-fatjar,openjfx-desktop' package
+        name: Build OpenJFX fat jar
+        run: ${{ matrix.MVN }} -B -P 'openjfx-fatjar' package # ${{ matrix.MVN }} -B -P 'openjfx-fatjar,openjfx-desktop'
         working-directory: ${{ env.app-parent-module-dir }}
 
 
@@ -221,6 +201,32 @@ jobs:
           destination-github-username: ${{ env.web-push-username }}
           user-email: ${{ env.web-push-email }}
 
+      - if: matrix.os-config == 1 && matrix.app.teavm-push-branch != null && env.API_GITHUB_TOKEN != ''
+        name: Push TeaVM JS build to ${{ matrix.app.teavm-push-branch }} branch
+        uses: cpina/github-action-push-to-another-repository@master
+        env:
+          API_TOKEN_GITHUB: ${{ env.API_GITHUB_TOKEN }}
+        with:
+          source-directory: ${{ env.app-teavm-build-dir }}
+          destination-repository-username: ${{ env.web-push-repository-owner }}
+          destination-repository-name: ${{ env.web-push-repository-name }}
+          target-branch: ${{ matrix.app.teavm-push-branch }}
+          destination-github-username: ${{ env.web-push-username }}
+          user-email: ${{ env.web-push-email }}
+
+      - if: matrix.os-config == 1 && matrix.app.teavm-wasm-push-branch != null && env.API_GITHUB_TOKEN != ''
+        name: Push TeaVM WASM build to ${{ matrix.app.teavm-wasm-push-branch }} branch
+        uses: cpina/github-action-push-to-another-repository@master
+        env:
+          API_TOKEN_GITHUB: ${{ env.API_GITHUB_TOKEN }}
+        with:
+          source-directory: ${{ env.app-teavm-wasm-build-dir }}
+          destination-repository-username: ${{ env.web-push-repository-owner }}
+          destination-repository-name: ${{ env.web-push-repository-name }}
+          target-branch: ${{ matrix.app.teavm-wasm-push-branch }}
+          destination-github-username: ${{ env.web-push-username }}
+          user-email: ${{ env.web-push-email }}
+
       ##################################################################################################################
       #                                           Staging artifacts                                                    #
       ##################################################################################################################
@@ -243,12 +249,6 @@ jobs:
       - if: matrix.gwt-artifact-suffix != null
         name: Copy Web archive to staging
         run: cp ${{ env.app-gwt-module-dir }}/target/*.war staging/${{ env.app-name }}-${{ matrix.gwt-artifact-suffix }}
-
-      # Building J2CL application (if required)
-      - if: matrix.j2cl-artifact-suffix != null || matrix.app.j2cl-push-branch != null && matrix.os-config == 1
-        name: Build J2CL application
-        run: ${{ matrix.MVN }} -B -P j2cl package
-        working-directory: ${{ env.app-parent-module-dir }}
 
       # Staging 2) | 7) | 11)
       - if: matrix.fatjar-artifact-suffix != null
@@ -418,7 +418,7 @@ jobs:
           cp ${{ env.app-gluon-module-dir }}/target/gluonfx/${{ matrix.gluon-android-arch-token }}/gvm/*.apk staging/${{ env.app-name }}-${{ matrix.gluon-android-apk-suffix }}
           cp ${{ env.app-gluon-module-dir }}/target/gluonfx/${{ matrix.gluon-android-arch-token }}/gvm/*.aab staging/${{ env.app-name }}-${{ matrix.gluon-android-aab-suffix }}
 
-      # Uploading to Google Play (if json provided)
+      # Uploading to Google Play (if JSON provided)
       - if: matrix.gluon-ios-arch-token != null && env.GLUON_ANDROID_SERVICE_ACCOUNT_JSON != ''
         name: Upload to Google Play
         uses: r0adkll/upload-google-play@v1.0.19
@@ -505,7 +505,7 @@ jobs:
 
       # Uploading all artifacts in the assets of this workflow run
       - name: Upload artifacts in the assets of this workflow run
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: build-${{ matrix.os-config }}-assets
           path: staging/*
@@ -531,14 +531,14 @@ jobs:
       # Note: each asset will be a folder containing the artifacts
       - if: env.API_GITHUB_TOKEN != ''
         name: Download artifacts into staging directory
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           path: download
 
       - name: Make upload directory
         run: mkdir upload
 
-      # Moving all artifact into the upload directory
+      # Moving all artifacts into the upload directory
       - run: find download -type f -exec mv -t upload {} +
 
       # Clearing SNAPSHOT release assets

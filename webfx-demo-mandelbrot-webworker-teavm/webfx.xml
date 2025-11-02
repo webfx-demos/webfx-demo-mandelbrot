@@ -7,7 +7,7 @@
 
     <maven-pom-manual>
         <properties>
-            <plugin.teavm.param.mainClass>dev.webfx.demo.mandelbrot.webworker.teavm.TeaVmMandelbrotWorkerEntryPoint</plugin.teavm.param.mainClass>
+            <plugin.teavm.param.mainClass>dev.webfx.demo.mandelbrot.webworker.teavm.TeaVMMandelbrotWorkerEntryPoint</plugin.teavm.param.mainClass>
         </properties>
 
         <build>

@@ -1,4 +1,4 @@
-package dev.webfx.demo.mandelbrot.webassembly.teavm;
+package dev.webfx.demo.mandelbrot.webworker.teavm.wasm;
 
 import org.teavm.interop.Address;
 import org.teavm.interop.Export;
@@ -7,7 +7,7 @@ import dev.webfx.demo.mandelbrot.math.MandelbrotMath;
 /**
  * @author Bruno Salmon
  */
-public final class TeaVmMandelbrotWebAssemblyEntryPoints {
+public final class TeaVMWasmMandelbrotEntryPoints {
 
     public static void main(String[] args) {} // Not used but required to declare the main class on TeaVM
 

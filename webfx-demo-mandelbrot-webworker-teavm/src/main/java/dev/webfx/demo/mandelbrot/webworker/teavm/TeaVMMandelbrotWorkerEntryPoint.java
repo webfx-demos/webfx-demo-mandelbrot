@@ -7,7 +7,7 @@ import dev.webfx.platform.webworker.spi.impl.teavm.TeaVmRunningWebWorker;
 /**
  * @author Bruno Salmon
  */
-public class TeaVmMandelbrotWorkerEntryPoint {
+public class TeaVMMandelbrotWorkerEntryPoint {
 
     public static void main(String[] args) {
         TeaVmRunningWebWorker.executeJavaCodedWorker(new MandelbrotWebWorker());

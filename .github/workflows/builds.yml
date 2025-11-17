@@ -143,7 +143,7 @@ jobs:
 
       # Building this repository with JDK 13+ (Java 11 target)
       - name: Build this repository
-        run: ${{ matrix.MVN }} -B install
+        run: ${{ matrix.MVN }} -B -Pteavm install
         working-directory: ${{ env.app-repo-dir }}
 
       # Building GWT application (if required)

@@ -24,7 +24,7 @@ final class MandelbrotPixelComputer implements PixelComputer {
 
     private int canvasWidth, canvasHeight;
     private int placeIndex = -1, frameIndex, thumbnailFrameIndex = -1;
-    private boolean usingWebAssembly = false;
+    private boolean usingWebAssembly = true;
     private long currentFrameIterations, lastFrameIterations;
 
     private int maxIterations;
